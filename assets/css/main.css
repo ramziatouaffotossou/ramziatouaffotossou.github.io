@@ -149,29 +149,51 @@
     opacity: 1;
     transform: translateY(-50%) translateX(0);
 }
-
-/* ========================= */
-/* 📱 RESPONSIVE MOBILE */
-/* ========================= */
-@media (max-width: 768px) {
-    .side-menu {
-        left: 8px;
-        width: 45px;
-        padding: 10px 0;
-    }
-
-    .side-menu a {
-        width: 34px;
-        height: 34px;
-        font-size: 14px;
-    }
-
-    /* Masquer la bulle sur mobile */
-    .side-menu a::after,
-    .side-menu a::before {
-        display: none;
-    }
+.menu-toggle {
+  display: none;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+  /* Bouton hamburger */
+  
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 3000;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 24px;
+  }
+
+
+  /* Menu caché par défaut */
+  .side-menu {
+    left: auto !important;
+    right: -80px;
+    transition: right 0.3s ease;
+  }
+
+  /* Menu visible */
+  .side-menu.open {
+    right: 8px;
+  }
+
+  /* Supprimer bulles */
+  .side-menu a::before,
+  .side-menu a::after {
+    display: none;
+  }
+}
+
     /* Main Content */
     .main {
       margin-left: 100px;
@@ -239,6 +261,7 @@
       color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 30px;
+      text-align: justify;
     }
 
     .accent-text {
@@ -840,6 +863,7 @@
       text-decoration: none;
     }
     /* Responsive */
+
     @media (max-width: 1199px) {
       .header {
         width: 250px;
@@ -850,6 +874,7 @@
     }
 
     @media (max-width: 991px) {
+     
       .header {
         left: -300px;
         transition: left 0.3s;
@@ -956,6 +981,7 @@
         }
 
         @media (max-width: 900px) {
+          
             .skills-grid {
                 grid-template-columns: 1fr;
             }
