@@ -8,6 +8,10 @@
 // ========================================
     // NETWORK ANIMATION BACKGROUND
     // ========================================
+
+    document.getElementById("menuToggle").addEventListener("click", () => {
+  document.querySelector(".side-menu").classList.toggle("open");
+});
     const canvas = document.getElementById('network-canvas');
     const ctx = canvas.getContext('2d');
     
