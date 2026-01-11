@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - SnapFolio Bootstrap Template</title>
+  <title>Portfolio Ramziatou</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 
 
   <!-- Favicons -->
@@ -46,19 +46,25 @@
 
             <div>
                   <div class="side-menu">
-                <a a href="#hero" class="active" data-tooltip="Accueil">
+                <a   href="#hero" class="active" data-tooltip="Accueil">
                     <i class="bi bi-house navicon"></i>
                 </a>
-                <a href="#resume" data-tooltip="CV">
+                <a  href="#resume" data-tooltip="CV">
                    <i class="bi bi-file-earmark-text navicon"></i>
                 </a>
-                <a href="#portfolio" data-tooltip="Portfolio">
+                <a  href="#portfolio" data-tooltip="Portfolio">
                     <i class="bi bi-briefcase"></i>
                 </a>
             </div>
 <button id="menuToggle" class="menu-toggle"> ☰ </button> 
 
-
+<!-- Bouton Switch Langue -->
+<div class="language-switch">
+  <button id="langBtn" class="lang-btn">
+    <i class="bi bi-translate"></i>
+    <span id="currentLang">FR</span>
+  </button>
+</div>
 
 
   <main class="main">
@@ -73,20 +79,20 @@
           <div class="row align-items-center">
             <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
               <div class="hero-text">
-                <h1>Bonjour, <span class="accent-text">Je suis</span></h1>
+                <h1 ><span class="greeting">Bonjour,</span> <span class="accent-text">Je suis</span></h1>
                 <h2>Ramziatou AFFO TOSSOU</h2>
-                <p class="lead">Future <span class="accent-text">Experte en Cybersécurité</span></p>
-                <p class="description">Originaire du Bénin, j’ai développé mon intérêt pour l’informatique au Lycée Technique Coulibaly.
+                <p  class="lead">Future <span class="accent-text">Experte en Cybersécurité</span></p>
+                <p  class="description">Originaire du Bénin, j’ai développé mon intérêt pour l’informatique au Lycée Technique Coulibaly.
 Après deux stages en maintenance informatique, je suis actuellement en première année de BUT Réseaux et Télécommunications, parcours cybersécurité, à l’IUT de Béthune.
 
 Mon objectif professionnel est de devenir experte en sécurité des systèmes d’information et de contribuer à la protection des infrastructures numériques dans un environnement en constante évolution.</p>
 
-                <div class="hero-actions">
-                  <a href="#portfolio" class="btn-primary">
+                <div  class="hero-actions">
+                  <a  href="#portfolio" class="btn-primary">
                     <i class="bi bi-folder2-open"></i> &nbsp;
                     Mes Projets
                   </a>
-                  <a href="#resume" class="btn-outline">
+                  <a data-i18n="btn_cv" href="#resume" class="btn-outline">
                     <i class="bi bi-file-earmark-text"></i> &nbsp;
                     Mon CV
                   </a>
@@ -101,8 +107,8 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
                 </div>
 
                 <div class="social-links">
-                  <a href="https://github.com/votre-github" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-                  <a href="https://linkedin.com/in/votre-linkedin" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://github.com/ramziatouaffotossou" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -123,21 +129,21 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
           <!-- Left column -->
           <div class="col-lg-4">
             <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-              <h3>Informations de Contact</h3>
+              <h3 data-i18n=" ">Informations de Contact</h3>
               <ul class="contact-info list-unstyled">
                 <li><i class="bi bi-geo-alt"></i> Béthune, France</li>
                 <li><i class="bi bi-envelope"></i> at.ramziatou@gmail.com</li>
-                <li><i class="bi bi-linkedin"></i> <a href="https://linkedin.com/in/votre-linkedin" target="_blank" style="color: var(--text-muted);">LinkedIn</a></li>
-                <li><i class="bi bi-github"></i> <a href="https://github.com/votre-github" target="_blank" style="color: var(--text-muted);">GitHub</a></li>
+                <li><i class="bi bi-linkedin"></i> <a  href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" style="color: var(--text-muted);">LinkedIn</a></li>
+                <li><i class="bi bi-github"></i> <a href="https://github.com/ramziatouaffotossou" target="_blank" style="color: var(--text-muted);">GitHub</a></li>
               </ul>
 
               <h3 class="mt-4">Langues</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-check-circle"></i> Français : Courant</li>
-                <li><i class="bi bi-check-circle"></i> Anglais : Intermédiaire</li>
+                <li data-i18n="frenchNative"><i class="bi bi-check-circle"></i> Français : Courant</li>
+                <li data-i18n="englishInter"><i class="bi bi-check-circle"></i> Anglais : Intermédiaire</li>
               </ul>
 
-              <h3 class="mt-4">Compétences Techniques</h3>
+              <h3 data-i18n=" " class="mt-4">Compétences Techniques</h3>
               <ul class="contact-info list-unstyled">
                 <li><i class="bi bi-shield-check"></i>Administration réseau (Débutant)</li>
                 <li><i class="bi bi-tools"></i>Packet Tracer</li>
@@ -400,7 +406,7 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
               <div class="portfolio-item filter-securiser" data-aos="fade-up" data-aos-delay="100">
                 <div class="portfolio-card">
                   <div class="portfolio-card-header">
-                  <a href="https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git" >
+                  <a class="no-line" href="https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git" >
                     <h4 class="portfolio-card-title">SAE 1.01 - Hygiène Informatique</h4></a>  
                     <div class="portfolio-card-meta">
                       <i class="bi bi-calendar3"></i>
@@ -413,7 +419,7 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
                     </p>
                     <div class="portfolio-card-tags">
                       <span class="portfolio-card-tag">ANSSI</span>
-                      <span class="portfolio-card-tag">Cybersécurité</span>
+                      <span class="portfolio-card-tag">Cybersecurity</span>
                       <span class="portfolio-card-tag">MOOC</span>
                     </div>
                     <div class="portfolio-competences">
@@ -430,7 +436,7 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
               <div class="portfolio-item filter-connecter " data-aos="fade-up" data-aos-delay="200">
                 <div class="portfolio-card">
                   <div class="portfolio-card-header">
-                    <a href="https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git" >
+                    <a class="no-line"  href="https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git" >
                     <h4 class="portfolio-card-title">SAE 1.03 - Dispositif de Transmission</h4></a>
                     <div class="portfolio-card-meta">
                       <i class="bi bi-calendar3"></i>
@@ -444,7 +450,7 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
                     <div class="portfolio-card-tags">
                       <span class="portfolio-card-tag">Transmission</span>
                       <span class="portfolio-card-tag">Signal</span>
-                      <span class="portfolio-card-tag">Réseaux</span>
+                      
                     </div>
                     <div class="portfolio-competences">
                       <span class="portfolio-competence-badge badge-connecter">
@@ -460,11 +466,11 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
               <!-- Projet 3 : Plateforme ESGIS -->
              
 
-            <a href="https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git" >
+          
               <div class="portfolio-item filter-programmer" data-aos="fade-up" data-aos-delay="300">
                 <div class="portfolio-card">
                   <div class="portfolio-card-header">
-                     <a href="https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git" >
+                     <a class="no-line"  href="https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git" >
                       <h4 class="portfolio-card-title">Plateforme ESGIS</h4></a> 
                     <div class="portfolio-card-meta">
                       <i class="bi bi-calendar3"></i>
@@ -495,7 +501,7 @@ Mon objectif professionnel est de devenir experte en sécurité des systèmes d�
               <div class="portfolio-item filter-programmer" data-aos="fade-up" data-aos-delay="600">
                 <div class="portfolio-card">
                   <div class="portfolio-card-header">
-                    <a href="https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git" >
+                    <a class="no-line"  href="https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git" >
                     <h4 class="portfolio-card-title">Portfolio Web Responsive</h4></a>
                     <div class="portfolio-card-meta">
                       <i class="bi bi-calendar3"></i>
@@ -617,8 +623,8 @@ Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des o
 
       <div class="credits text-center mt-3">
         <p style="color: var(--text-muted); font-size: 0.9rem;">
-          Designed by Ramziatou AFFO TOSSOU <span style="color: var(--primary-color);">❤</span>| 
-          Template by <a href="https://bootstrapmade.com/" target="_blank" style="color: var(--primary-color); text-decoration: none;">BootstrapMade</a>
+          Conçu par Ramziatou AFFO TOSSOU <span style="color: var(--primary-color);">❤</span>| 
+          Template par <a href="https://bootstrapmade.com/" target="_blank" style="color: var(--primary-color); text-decoration: none;">BootstrapMade</a>
         </p>
       </div>
     </div>
