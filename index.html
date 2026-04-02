@@ -382,162 +382,111 @@
       </div>
     </section>
    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio - Projets R&T</h2>
+   
+<section id="support-portfolio" class="support-portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio - Projets R&T</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    
+
+    <!-- Grille des compétences -->
+    <div class="sp-competences-grid">
+
+      <!-- ADMINISTRER -->
+      <div class="sp-comp-card sp-administrer" onclick="openCompetence('administrer')">
+        <div class="sp-comp-icon"><i class="bi bi-gear-fill"></i></div>
+        <div class="sp-comp-name">Administrer</div>
+        <div class="sp-comp-sub">6 AC</div>
+        <i class="bi bi-arrow-right sp-comp-arrow"></i>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-12">
-            
-            <!-- Filtres -->
-            <ul class="portfolio-filters">
-              <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3-gap"></i> Tous</li>
-              <li data-filter=".filter-administrer"><i class="bi bi-gear"></i> Administrer</li>
-              <li data-filter=".filter-connecter"><i class="bi bi-hdd-network"></i> Connecter</li>
-              <li data-filter=".filter-programmer"><i class="bi bi-code-slash"></i> Programmer</li>
-              <li data-filter=".filter-securiser"><i class="bi bi-shield-check"></i> Sécuriser</li>
-              <li data-filter=".filter-surveiller"><i class="bi bi-eye"></i> Surveiller</li>
-            </ul>
-
-            <!-- Projets en cartes -->
-            <div class="portfolio-container">
-
-              <!-- Projet 1 : SAE 1.01 Cybersécurité -->
-              <div class="portfolio-item filter-securiser" data-aos="fade-up" data-aos-delay="100">
-                <div class="portfolio-card">
-                  <div class="portfolio-card-header">
-                              <h4 class="portfolio-card-title" onclick="openProjectModal('sae103')" style="cursor:pointer;">
-AE 1.01 - Hygiène Informatique</h4>
-                    <div class="portfolio-card-meta">
-                      <i class="bi bi-calendar3"></i>
-                      <span>2025 - 2026</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-card-body">
-                    <p class="portfolio-card-description">
-                      Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique. Sensibilisation aux risques cyber et obtention de l'attestation ANSSI.
-                    </p>
-                    <div class="portfolio-card-tags">
-                      <span class="portfolio-card-tag">ANSSI</span>
-                      <span class="portfolio-card-tag">Cybersecurity</span>
-                      <span class="portfolio-card-tag">MOOC</span>
-                    </div>
-                    <div class="portfolio-competences">
-                      <span class="portfolio-competence-badge badge-securiser">
-                        <i class="bi bi-shield-check"></i>
-                        Sécuriser
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Projet 2 : SAE 1.03 Transmission -->
-              <div class="portfolio-item filter-connecter " data-aos="fade-up" data-aos-delay="200">
-                <div class="portfolio-card">
-                  <div class="portfolio-card-header">
-                  
-                    <h4 class="portfolio-card-title" onclick="openProjectModal('sae103')" style="cursor:pointer;">
- SAE 1.03 - Dispositif de Transmission
-</h4>
-                
-                    <div class="portfolio-card-meta">
-                      <i class="bi bi-calendar3"></i>
-                      <span>2025 - 2026</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-card-body">
-                    <p class="portfolio-card-description">
-                      Découverte et étude approfondie des dispositifs de transmission de données dans les réseaux..
-                    </p>
-                    <div class="portfolio-card-tags">
-                      <span class="portfolio-card-tag">Transmission</span>
-                      <span class="portfolio-card-tag">Signal</span>
-                      
-                    </div>
-                    <div class="portfolio-competences">
-                      <span class="portfolio-competence-badge badge-connecter">
-                        <i class="bi bi-hdd-network"></i>
-                        Connecter
-                      </span>
-                    
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Projet 3 : Plateforme ESGIS -->
-             
-
-          
-              <div class="portfolio-item filter-programmer" data-aos="fade-up" data-aos-delay="300">
-                <div class="portfolio-card">
-                  <div class="portfolio-card-header">
-                                <h4 class="portfolio-card-title" onclick="openProjectModal('esgis')" style="cursor:pointer;">
-Plateforme ESGIS</h4>
-                    <div class="portfolio-card-meta">
-                      <i class="bi bi-calendar3"></i>
-                      <span>2024 - 2025</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-card-body">
-                    <p class="portfolio-card-description">
-                      Développement d'une plateforme web dans le cadre d'un projet scolaire. Création d'interfaces et mise en place d'une base de donnée.
-                    </p>
-                    <div class="portfolio-card-tags">
-                      <span class="portfolio-card-tag">Web</span>
-                      <span class="portfolio-card-tag">HTML/CSS</span>
-                      <span class="portfolio-card-tag">Php</span>
-                    </div>
-                    <div class="portfolio-competences">
-                      <span class="portfolio-competence-badge badge-programmer">
-                        <i class="bi bi-code-slash"></i>
-                        Programmer
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Projet 4 : Portfolio Web -->
-              <div class="portfolio-item filter-programmer" data-aos="fade-up" data-aos-delay="600">
-                <div class="portfolio-card">
-                  <div class="portfolio-card-header">
-               <h4 class="portfolio-card-title" onclick="openProjectModal('portfolio')" style="cursor:pointer;">
-Portfolio Web Responsive</h4>
-                    <div class="portfolio-card-meta">
-                      <i class="bi bi-calendar3"></i>
-                      <span>2025 - 2026</span>
-                    </div>
-                  </div>
-                  <div class="portfolio-card-body">
-                    <p class="portfolio-card-description">
-                      Création de ce portfolio personnel avec design moderne, animations interactives et réseau de nodes en arrière-plan. Site responsive hébergé sur GitHub.
-                    </p>
-                    <div class="portfolio-card-tags">
-                      <span class="portfolio-card-tag">HTML5</span>
-                      <span class="portfolio-card-tag">CSS3</span>
-                      <span class="portfolio-card-tag">JavaScript</span>
-                      <span class="portfolio-card-tag">Bootstrap</span>
-                    </div>
-                    <div class="portfolio-competences">
-                      <span class="portfolio-competence-badge badge-programmer">
-                        <i class="bi bi-code-slash"></i>
-                        Programmer
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
+      <!-- CONNECTER -->
+      <div class="sp-comp-card sp-connecter" onclick="openCompetence('connecter')">
+        <div class="sp-comp-icon"><i class="bi bi-hdd-network-fill"></i></div>
+        <div class="sp-comp-name">Connecter</div>
+        <div class="sp-comp-sub">5 AC</div>
+        <i class="bi bi-arrow-right sp-comp-arrow"></i>
       </div>
-    </section>
+
+      <!-- PROGRAMMER -->
+      <div class="sp-comp-card sp-programmer" onclick="openCompetence('programmer')">
+        <div class="sp-comp-icon"><i class="bi bi-code-slash"></i></div>
+        <div class="sp-comp-name">Programmer</div>
+        <div class="sp-comp-sub">5 AC</div>
+        <i class="bi bi-arrow-right sp-comp-arrow"></i>
+      </div>
+
+      <!-- SÉCURISER -->
+      <div class="sp-comp-card sp-securiser" onclick="openCompetence('securiser')">
+        <div class="sp-comp-icon"><i class="bi bi-shield-fill-check"></i></div>
+        <div class="sp-comp-name">Sécuriser</div>
+        <div class="sp-comp-sub">4 AC</div>
+        <i class="bi bi-arrow-right sp-comp-arrow"></i>
+      </div>
+
+      <!-- SURVEILLER -->
+      <div class="sp-comp-card sp-surveiller" onclick="openCompetence('surveiller')">
+        <div class="sp-comp-icon"><i class="bi bi-eye-fill"></i></div>
+        <div class="sp-comp-name">Surveiller</div>
+        <div class="sp-comp-sub">4 AC</div>
+        <i class="bi bi-arrow-right sp-comp-arrow"></i>
+      </div>
+
+    </div><!-- fin grille -->
+
+   
+
+  </div>
+</section>
+
+<!-- =============================================
+     OVERLAY NIVEAU 2 : liste des AC
+     ============================================= -->
+<div id="sp-ac-overlay" class="sp-overlay">
+  <div class="sp-overlay-panel">
+    <div class="sp-overlay-header">
+      <button class="sp-back-btn" onclick="closeAcOverlay()">
+        <i class="bi bi-arrow-left"></i> Retour
+      </button>
+      <div class="sp-overlay-title">
+        <span id="sp-ac-comp-icon"></span>
+        <h3 id="sp-ac-comp-name"></h3>
+      </div>
+      <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="sp-overlay-body">
+      <p class="sp-overlay-hint">Cliquez sur un apprentissage critique pour voir votre analyse réflexive</p>
+      <div id="sp-ac-list" class="sp-ac-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     OVERLAY NIVEAU 3 : questions réflexives
+     ============================================= -->
+<div id="sp-reflexive-overlay" class="sp-overlay">
+  <div class="sp-overlay-panel sp-overlay-panel--wide">
+    <div class="sp-overlay-header">
+      <button class="sp-back-btn" onclick="closeReflexiveOverlay()">
+        <i class="bi bi-arrow-left"></i> Retour aux AC
+      </button>
+      <div class="sp-overlay-title">
+        <span id="sp-ref-ac-code" class="sp-ref-ac-code"></span>
+        <h3 id="sp-ref-ac-label"></h3>
+      </div>
+      <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="sp-overlay-body">
+      <div id="sp-reflexive-grid" class="sp-reflexive-grid"></div>
+      <div id="sp-project-trace" class="sp-project-trace"></div>
+    </div>
+  </div>
+</div>
+    
+   
 
 
   </main>
