@@ -630,6 +630,35 @@ Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des o
         </p>
       </div>
     </div>
+
+  <!-- Modal Détail Projet -->
+<div id="project-modal" class="project-modal-overlay" onclick="closeProjectModal(event)">
+  <div class="project-modal-box">
+    <button class="project-modal-close" onclick="closeModal()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <div class="project-modal-header">
+      <div class="project-modal-badge" id="modal-badge"></div>
+      <h3 id="modal-title"></h3>
+      <div class="project-modal-meta">
+        <span id="modal-date"><i class="bi bi-calendar3"></i> </span>
+        <a id="modal-github" href="#" target="_blank">
+          <i class="bi bi-github"></i> Voir sur GitHub
+        </a>
+      </div>
+    </div>
+
+    <p id="modal-description" class="project-modal-desc"></p>
+
+    <div class="project-modal-tags" id="modal-tags"></div>
+
+    <div class="project-modal-ce-section">
+      <h4><i class="bi bi-bullseye"></i> Éléments de compétence mobilisés</h4>
+      <ul class="project-modal-ce-list" id="modal-ce-list"></ul>
+    </div>
+  </div>
+</div>
   </footer>
 
   <!-- Scroll Top -->
