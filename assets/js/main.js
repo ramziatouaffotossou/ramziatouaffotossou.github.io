@@ -792,3 +792,105 @@ if (footerLinks[1]) footerLinks[1].textContent = t.credits;
 
 // Event listener
 document.getElementById('langBtn').addEventListener('click', switchLanguage);
+
+
+
+
+// Données des projets
+const projectsData = {
+  "sae101": {
+    title: "SAE 1.01 — Hygiène Informatique",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git",
+    description: "Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique. Sensibilisation aux risques cyber et obtention de l'attestation ANSSI SecNumacadémie.",
+    tags: ["ANSSI", "Cybersecurity", "MOOC"],
+    badge: "Sécuriser",
+    badgeClass: "badge-securiser-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.02", label: "en respectant les principes fondamentaux de la sécurité informatique" },
+      { code: "CE1.05", label: "en assurant une veille technologique" }
+    ]
+  },
+  "sae103": {
+    title: "SAE 1.03 — Dispositif de Transmission",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git",
+    description: "Découverte et étude approfondie des dispositifs de transmission de données dans les réseaux. Analyse des supports cuivre, fibre et sans fil.",
+    tags: ["Transmission", "Signal"],
+    badge: "Connecter",
+    badgeClass: "badge-connecter-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
+      { code: "CE1.04", label: "en respectant les règles métiers" }
+    ]
+  },
+  "esgis": {
+    title: "Plateforme ESGIS",
+    date: "2024 - 2025",
+    github: "https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git",
+    description: "Développement d'une plateforme web de gestion de bulletins scolaires dans le cadre d'un projet scolaire. Création d'interfaces et mise en place d'une base de données.",
+    tags: ["Web", "HTML/CSS", "PHP"],
+    badge: "Programmer",
+    badgeClass: "badge-programmer-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
+      { code: "CE1.04", label: "en respectant les règles métiers" }
+    ]
+  },
+  "portfolio": {
+    title: "Portfolio Web Responsive",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git",
+    description: "Création de ce portfolio personnel avec design moderne, animations interactives et réseau de nodes en arrière-plan. Site responsive hébergé sur GitHub Pages.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    badge: "Programmer",
+    badgeClass: "badge-programmer-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
+      { code: "CE1.04", label: "en respectant les règles métiers" },
+      { code: "CE1.05", label: "en assurant une veille technologique" }
+    ]
+  }
+};
+
+function openProjectModal(id) {
+  const data = projectsData[id];
+  if (!data) return;
+
+  document.getElementById('modal-title').textContent = data.title;
+  document.getElementById('modal-date').innerHTML = `<i class="bi bi-calendar3"></i> ${data.date}`;
+  document.getElementById('modal-github').href = data.github;
+  document.getElementById('modal-description').textContent = data.description;
+
+  const badge = document.getElementById('modal-badge');
+  badge.textContent = data.badge;
+  badge.className = 'project-modal-badge ' + data.badgeClass;
+
+  const tagsEl = document.getElementById('modal-tags');
+  tagsEl.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
+
+  const ceList = document.getElementById('modal-ce-list');
+  ceList.innerHTML = data.ce.map(c =>
+    `<li><span class="ce-code">${c.code}</span> ${c.label}</li>`
+  ).join('');
+
+  document.getElementById('project-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('project-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function closeProjectModal(e) {
+  if (e.target === document.getElementById('project-modal')) closeModal();
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
