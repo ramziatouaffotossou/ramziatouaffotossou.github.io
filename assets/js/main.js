@@ -1207,7 +1207,7 @@ reflexive: {
           difficultes: "Comprendre un code que je n'avais pas écrit moi-même était difficile : il fallait lire ligne par ligne et comprendre la logique globale avant de modifier quoi que ce soit.",
           appris: "Savoir lire du code est aussi important que savoir en écrire. Commenter son code et nommer clairement ses variables facilite énormément la maintenance et la collaboration.",
           autrement: "Je commenterais chaque section du code au fur et à mesure de ma lecture pour garder une trace de ma compréhension.",
-         projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: "https://ramziatouaffotossou.github.io/docs/Programmer_fonctions.pdf", lien: "https://ramziatouaffotossou.github.io/docs/PythonEssential1.pdf", desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
+         projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: "https://ramziatouaffotossou.github.io/docs/PythonEssential1.pdf", desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
         }
       },
       {
