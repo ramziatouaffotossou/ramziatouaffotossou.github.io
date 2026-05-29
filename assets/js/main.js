@@ -898,362 +898,454 @@ document.addEventListener('keydown', function(e) {
 /* ================================================
    SUPPORT PORTFOLIO — données
    ================================================ */
-   const spData = {
-    administrer: {
-      label: "Administrer",
-      icon: '<i class="bi bi-gear-fill" style="color:#e05065"></i>',
-      codeClass: "sp-administrer",
-      color: "#c41e3a",
-      ac: [
-        {
-          code: "AC11.01",
-          label: "Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications",
-          reflexive: {
-            fait: "J'ai étudié les lois d'Ohm et de Kirchhoff en TP, mesuré des tensions et courants sur des montages simples avec un multimètre.",
-            pourquoi: "Pour pouvoir diagnostiquer des pannes matérielles sur des équipements réseau et comprendre les besoins en alimentation.",
-            comment: "Via les TP du cours R101, utilisation d'un multimètre et d'une platine de test, appui sur les cours théoriques d'électricité.",
-            difficultes: "La conversion entre unités (mA, A, V, kΩ) et l'application des formules dans des circuits mixtes séries/parallèles m'ont posé des difficultés.",
-            appris: "J'ai compris comment calculer la consommation d'un switch ou d'un routeur PoE, et l'importance des protections électriques dans les baies réseau.",
-            autrement: "Je ferais plus de schémas annotés pour visualiser les circuits avant de mesurer.",
-            projet: { titre: "TP Électricité - R101", lien: null, desc: "Montage et mesure de circuits résistifs en série et parallèle, relevé de courbes tension/courant." }
-          }
-        },
-        {
-          code: "AC11.02",
-          label: "Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet",
-          reflexive: {
-            fait: "J'ai étudié les modèles OSI et TCP/IP, analysé des trames avec Wireshark et compris les mécanismes d'encapsulation des données.",
-            pourquoi: "Comprendre comment l'information circule dans un réseau est indispensable pour administrer et sécuriser une infrastructure.",
-            comment: "Cours R102, TP Wireshark pour capturer et décoder des paquets HTTP, DNS, ICMP. Documentation RFC et supports de cours.",
-            difficultes: "La lecture des trames en hexadécimal et l'identification des en-têtes de chaque couche ont demandé beaucoup de pratique.",
-            appris: "J'ai acquis une vision claire du chemin qu'emprunte un paquet, ce qui m'aide maintenant à diagnostiquer les problèmes réseau couche par couche.",
-            autrement: "Je commencerais directement par capturer du trafic réel plutôt que des exemples théoriques, pour rendre l'apprentissage plus concret.",
-            projet: { titre: "TP Wireshark - R102", lien: null, desc: "Capture et analyse de trames réseau : identification des protocoles, lecture des en-têtes IPv4, TCP, DNS." }
-          }
-        },
-        {
-          code: "AC11.03",
-          label: "Configurer les fonctions de base du réseau local",
-          reflexive: {
-            fait: "J'ai configuré des switchs et routeurs Cisco en CLI : adresses IP, VLAN, routage statique, protocole DHCP.",
-            pourquoi: "C'est la compétence cœur du technicien réseau : sans savoir configurer un réseau local, impossible d'assurer sa disponibilité.",
-            comment: "Packet Tracer pour les simulations, puis équipements réels en TP. Appui sur la documentation Cisco et les supports du cours R103.",
-            difficultes: "Le routage inter-VLAN et la compréhension des interfaces virtuelles (SVI) ont été complexes. J'ai dû recommencer plusieurs fois.",
-            appris: "Je maîtrise maintenant les commandes de base de l'IOS Cisco et la logique de segmentation réseau par VLAN.",
-            autrement: "Je documenterais chaque configuration dans un journal de bord avec captures d'écran pour pouvoir rejouer les manipulations.",
-            projet: { titre: "SAE 1.03 — Dispositif de Transmission", lien: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git", desc: "Configuration de topologies réseau avec VLAN et routage inter-VLAN dans Packet Tracer." }
-          }
-        },
-        {
-          code: "AC11.04",
-          label: "Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis",
-          reflexive: {
-            fait: "J'ai utilisé Linux (Ubuntu) en ligne de commande : gestion des fichiers, droits utilisateurs, configuration réseau via ifconfig/ip, services systemd.",
-            pourquoi: "La majorité des serveurs réseau fonctionnent sous Linux. Maîtriser le terminal est incontournable pour administrer des services.",
-            comment: "TP systèmes du S1, tutoriels en ligne, pratique personnelle sur machine virtuelle VirtualBox.",
-            difficultes: "La gestion des droits (chmod, chown) et la compréhension des processus en arrière-plan (daemon) ont été les points les plus difficiles.",
-            appris: "Je me sens à l'aise dans un terminal Linux pour des tâches d'administration basiques et je comprends le rôle des principaux services réseau.",
-            autrement: "J'installerais un serveur Linux chez moi dès le début pour pratiquer quotidiennement et pas uniquement en TP.",
-            projet: { titre: "TP Systèmes Linux - S1", lien: null, desc: "Installation et configuration d'Ubuntu Server, gestion des utilisateurs et des services réseau de base." }
-          }
-        },
-        {
-          code: "AC11.05",
-          label: "Identifier les dysfonctionnements du réseau local et savoir les signaler",
-          reflexive: {
-            fait: "J'ai pratiqué le diagnostic réseau avec ping, traceroute, nslookup et Wireshark pour localiser des pannes simulées en TP.",
-            pourquoi: "Savoir identifier et signaler un problème réseau est essentiel pour maintenir la disponibilité des services et collaborer avec une équipe.",
-            comment: "Scénarios de panne en TP, méthodologie de diagnostic couche par couche (OSI), rédaction de rapports d'incident.",
-            difficultes: "Distinguer une panne de couche 2 (switch) d'une panne de couche 3 (routage) a été difficile sans méthode rigoureuse au départ.",
-            appris: "J'ai intégré une méthode de diagnostic systématique : vérifier physique → liaison → réseau → transport, ce qui accélère la résolution.",
-            autrement: "Je mettrais en place un système de tickets fictifs pour s'entraîner à la rédaction formelle d'incidents dès le début.",
-            projet: { titre: "TP Diagnostic réseau - R103", lien: null, desc: "Identification et résolution de pannes réseau simulées : câbles défectueux, mauvaise configuration IP, boucle de commutation." }
-          }
-        },
-        {
-          code: "AC11.06",
-          label: "Installer un poste client, expliquer la procédure mise en place",
-          reflexive: {
-            fait: "J'ai installé et configuré des postes Windows et Linux : partitionnement, installation OS, configuration réseau, installation de logiciels métier.",
-            pourquoi: "L'installation de postes clients fait partie du quotidien d'un technicien. Savoir expliquer la procédure est essentiel pour la documentation et la transmission.",
-            comment: "Stages de maintenance informatique (Surface Informatique et DNL Informatique, Cotonou) + TP de l'IUT.",
-            difficultes: "Documenter clairement chaque étape pour qu'un autre technicien puisse reproduire la procédure sans aide a été plus difficile que l'installation elle-même.",
-            appris: "J'ai compris l'importance de la documentation technique : une procédure bien rédigée fait gagner beaucoup de temps lors d'interventions futures.",
-            autrement: "Je prendrais des captures d'écran systématiquement à chaque étape dès le début de l'installation.",
-            projet: { titre: "Stage — Surface Informatique (Cotonou, 2023)", lien: null, desc: "Installation et configuration de postes clients Windows lors du stage de 3 mois : partitionnement, installation OS, configuration réseau, mise à jour des pilotes." }
-          }
+   const spData = {/* ================================================
+   REMPLACE le bloc spData dans ton main.js
+   Entre : const spData = {
+   Et :    let currentCompetence = null;
+   ================================================ */
+
+  administrer: {
+    label: "Administrer",
+    icon: '<i class="bi bi-gear-fill" style="color:#e05065"></i>',
+    color: "#c41e3a",
+    ac: [
+      {
+        code: "AC11.01",
+        label: "Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications",
+        reflexive: {
+          fait: "En cours de physique appliquée, j'ai étudié les lois fondamentales de l'électricité (loi d'Ohm, puissance électrique) et leur application aux équipements réseau comme les switchs et routeurs.",
+          pourquoi: "Pour pouvoir vérifier l'alimentation d'un équipement avant tout diagnostic de panne et comprendre les contraintes électriques d'une baie réseau.",
+          comment: "J'ai réalisé des exercices de calcul de tension, intensité et résistance, en faisant le lien avec les caractéristiques électriques des équipements utilisés en TP réseau.",
+          difficultes: "La conversion entre unités (mA, A, V, kΩ) et l'application des formules dans des circuits mixtes séries/parallèles m'ont posé des difficultés au départ.",
+          appris: "J'ai compris pourquoi il est important de vérifier l'alimentation d'un équipement avant tout diagnostic de panne, et comment les contraintes électriques influencent l'installation d'une baie.",
+          autrement: "Je ferais plus de schémas annotés pour visualiser les circuits avant de réaliser les mesures.",
+          projet: { titre: "TP Électricité — Cours R&T S1", desc: "Étude des lois fondamentales de l'électricité appliquées aux équipements réseau : calculs de tension, courant, résistance et puissance." }
         }
-      ]
-    },
-  
-    connecter: {
-      label: "Connecter",
-      icon: '<i class="bi bi-hdd-network-fill" style="color:#e07a3f"></i>',
-      color: "#e07a3f",
-      ac: [
-        {
-          code: "AC12.01",
-          label: "Maîtriser les technologies filaires des réseaux locaux",
-          reflexive: {
-            fait: "J'ai réalisé des câblages RJ45 (T568A/T568B), mesuré des câbles avec un testeur, et étudié les caractéristiques des catégories Cat5e, Cat6.",
-            pourquoi: "Le câblage structuré est la base physique de tout réseau. Un câble mal réalisé peut provoquer des pannes intermittentes difficiles à diagnostiquer.",
-            comment: "TP de câblage en S1, utilisation d'une pince à sertir, d'un testeur de câble et d'un guide de câblage structuré.",
-            difficultes: "Respecter l'ordre des fils dans le connecteur RJ45 sans se tromper a demandé plusieurs essais avant d'être fluide.",
-            appris: "Je sais réaliser un câble droit et croisé, et comprends pourquoi le choix de la catégorie impacte la bande passante et la distance maximale.",
-            autrement: "Je m'entraînerais sur plus de câbles avant le TP noté pour gagner en vitesse et en précision.",
-            projet: { titre: "SAE 1.03 — Dispositif de Transmission", lien: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git", desc: "Étude comparative des supports de transmission filaires et réalisation de câblages structurés." }
-          }
-        },
-        {
-          code: "AC12.02",
-          label: "Maîtriser les technologies des réseaux locaux sans fil",
-          reflexive: {
-            fait: "J'ai étudié les standards WiFi (802.11 a/b/g/n/ac), configuré un point d'accès en mode infrastructure et analysé les canaux WiFi avec un scanner.",
-            pourquoi: "Le sans-fil est omniprésent dans les entreprises. Comprendre ses mécanismes permet de déployer et sécuriser des réseaux WiFi.",
-            comment: "Cours R112, TP de configuration d'un AP Cisco, utilisation de l'outil inSSIDer pour l'analyse de spectre WiFi.",
-            difficultes: "La gestion des interférences et le choix des canaux non-chevauchants (1, 6, 11 en 2.4GHz) n'était pas intuitif au départ.",
-            appris: "Je comprends les compromis entre portée, débit et sécurité selon le standard WiFi choisi et l'environnement de déploiement.",
-            autrement: "Je ferais une cartographie de couverture radio (heatmap) dans le bâtiment de l'IUT pour rendre l'apprentissage plus concret.",
-            projet: { titre: "TP Réseaux sans fil - R112", lien: null, desc: "Configuration d'un access point, analyse du spectre WiFi 2.4/5GHz, optimisation du plan de canaux." }
-          }
-        },
-        {
-          code: "AC12.03",
-          label: "Mettre en place un réseau local",
-          reflexive: {
-            fait: "J'ai conçu et déployé des topologies réseau complètes en TP : plan d'adressage, câblage, configuration des équipements, tests de connectivité.",
-            pourquoi: "Mettre en place un réseau de bout en bout intègre toutes les compétences de connexion : c'est l'application concrète des apprentissages théoriques.",
-            comment: "Projets en binôme en TP, utilisation de Packet Tracer pour la conception puis équipements réels pour le déploiement.",
-            difficultes: "La gestion du plan d'adressage pour éviter les conflits IP et assurer une organisation logique a nécessité plusieurs itérations.",
-            appris: "J'ai appris à planifier avant d'agir : un bon plan d'adressage documenté évite la majorité des problèmes de configuration.",
-            autrement: "Je rédigerais un document de conception (plan réseau, tableau d'adressage) avant de toucher au moindre équipement.",
-            projet: { titre: "SAE 1.03 — Dispositif de Transmission", lien: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git", desc: "Déploiement complet d'un réseau local : câblage, plan d'adressage, configuration des équipements actifs et tests." }
-          }
-        },
-        {
+      },
+      {
+        code: "AC11.02",
+        label: "Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet",
+        reflexive: {
+          fait: "J'ai étudié l'architecture des systèmes numériques : codage binaire, fonctionnement des protocoles de communication, et structure d'un réseau local avec ses différents équipements (switch, routeur, poste client).",
+          pourquoi: "Comprendre comment l'information circule dans un réseau est indispensable pour administrer et sécuriser une infrastructure.",
+          comment: "À travers les cours de R&T et les TP, j'ai mis en pratique ces notions en configurant des équipements réels et en simulant des topologies réseau sur Packet Tracer.",
+          difficultes: "La lecture des trames en hexadécimal et l'identification des en-têtes de chaque couche ont demandé beaucoup de pratique.",
+          appris: "Comprendre l'architecture m'a aidé à mieux anticiper comment les données circulent dans un réseau et pourquoi certaines configurations sont nécessaires.",
+          autrement: "Je commencerais directement par capturer du trafic réel avec Wireshark pour rendre l'apprentissage plus concret.",
+          
+          projet: { titre: "Logique Combinatoire-Multiplexeur",   desc: "TP R106 - Codage en binaire", lien: null, images: [ { src: "assets/img/traces/logique.png",    }],
+   }
+        }
+      },
+      {
+        code: "AC11.03",
+        label: "Configurer les fonctions de base du réseau local",
+        reflexive: {
+          fait: "J'ai configuré un switch et un routeur Cisco en mode CLI : attribution d'adresses IP, création de VLANs, configuration des interfaces et mise en place du routage entre sous-réseaux.",
+          pourquoi: "C'est la compétence cœur du technicien réseau : sans savoir configurer un réseau local, impossible d'assurer sa disponibilité.",
+          comment: "En TP, j'ai utilisé le terminal Cisco IOS pour saisir les commandes de configuration. J'ai d'abord suivi les consignes du TP, puis essayé de reproduire la configuration de façon autonome.",
+          difficultes: "J'ai eu du mal à mémoriser la syntaxe des commandes IOS au début, notamment pour naviguer entre les différents modes de configuration.",
+          appris: "J'ai appris à structurer une configuration réseau étape par étape et à vérifier chaque paramètre avec des commandes comme show running-config ou show ip interface brief.",
+          autrement: "Je documenterais chaque configuration dans un journal de bord avec captures d'écran pour pouvoir rejouer les manipulations.",
+          projet: {
+  titre: "SAE 1.03 — Dispositif de Transmission",
+  lien: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git",
+  desc: "Configuration de topologies réseau avec VLANs et routage inter-VLAN dans Packet Tracer.",
+  images: [
+    { src: "assets/img/traces/lab_reseau.png",  caption: "Topologie du réseau local configuré en TP" },
+    { src: "assets/img/traces/ping.png",         caption: "Test de connectivité ping — vérification de la config" }
+  ]}
+        }
+      },
+      {
+        code: "AC11.04",
+        label: "Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis",
+        reflexive: {
+          fait: "J'ai installé et configuré un système d'exploitation Linux en TP : création d'utilisateurs, gestion des permissions, et configuration des paramètres réseau depuis le terminal.",
+          pourquoi: "La majorité des serveurs réseau fonctionnent sous Linux. Maîtriser le terminal est incontournable pour administrer des services.",
+          comment: "J'ai utilisé le terminal Linux pour exécuter des commandes d'administration système (adduser, chmod, ip addr) et l'interface graphique pour la configuration réseau sous Windows.",
+          difficultes: "La gestion des droits sous Linux m'a demandé du temps : comprendre la différence entre les droits utilisateur et root, et savoir quand utiliser sudo.",
+          appris: "J'ai compris le rôle central de l'OS dans l'administration d'un réseau : c'est par lui que passent toutes les configurations des services et des interfaces réseau.",
+          autrement: "J'installerais un serveur Linux en machine virtuelle chez moi dès le début pour pratiquer quotidiennement et pas uniquement en TP.",
+          projet: {
+  titre: "TP Systèmes Linux — S1",
+  lien: null,
+  desc: "Installation et configuration d'Ubuntu : gestion des utilisateurs, droits fichiers, configuration réseau.",
+   images: [
+    { src: "assets/img/traces/ubuntu3.png",  },
+    { src: "assets/img/traces/ubuntu4.png",     },
+    { src: "assets/img/traces/ubuntu1.jpg",         }
+  ]   /* Ajoute une capture de terminal Linux ici si tu en trouves une */
+}
+        }
+      },
+      {
+        code: "AC11.05",
+        label: "Identifier les dysfonctionnements du réseau local et savoir les signaler",
+        reflexive: {
+          fait: "Lors de TP, j'ai dû diagnostiquer des problèmes de connectivité : absence de ping entre deux machines, mauvaise configuration d'IP, câble mal branché sur le switch.",
+          pourquoi: "Savoir identifier et signaler un problème réseau est essentiel pour maintenir la disponibilité des services et collaborer avec une équipe.",
+          comment: "J'ai adopté une démarche méthodique : vérification du câblage physique, puis des adresses IP, puis des routes. J'ai utilisé ping, traceroute et les LEDs des équipements.",
+          difficultes: "Distinguer une panne de couche 2 (switch) d'une panne de couche 3 (routage) a été difficile sans méthode rigoureuse au départ.",
+          appris: "Un diagnostic efficace part toujours du bas de la pile réseau (couche physique) vers le haut. Cette méthode m'a évité de chercher des problèmes logiciels quand c'était un câble défectueux.",
+          autrement: "Je mettrais en place une checklist de diagnostic à suivre systématiquement pour ne pas sauter d'étapes sous pression.",
+         projet: {
+  titre: "TP Diagnostic réseau — R&T S1",
+  lien: null,
+  desc: "Identification et résolution de pannes réseau simulées : câbles défectueux, mauvaise configuration IP.",
+  images: [
+    { src: "assets/img/traces/ping.png",       caption: "Test ping — vérification de connectivité" },
+    { src: "assets/img/traces/tc^p-syn.png",   caption: "Capture TCP SYN — analyse de trafic réseau" }
+  ]
+}
+        }
+      },
+      {
+       code: "AC11.06",
+
+label: "Installer un poste client, expliquer la procédure mise en place",
+
+reflexive: {
+
+  fait: "Dans le cadre du module R202, j'ai installé et configuré des machines virtuelles Linux et Windows. J'ai réalisé la configuration réseau, la création d'utilisateurs ainsi que certaines tâches d'administration de base sous Linux.",
+
+  pourquoi: "Savoir installer et configurer un poste client est une compétence essentielle en administration système et réseau. Cela permet de préparer des environnements fonctionnels adaptés aux besoins des utilisateurs.",
+
+  comment: "J'ai utilisé des machines virtuelles pour installer les systèmes d'exploitation puis configurer les paramètres réseau (adresse IP, passerelle, DNS). Sous Linux, j'ai également utilisé des commandes d'administration comme ip addr, useradd ou passwd afin de gérer le système.",
+
+  difficultes: "Au début, certaines configurations Linux étaient difficiles à retenir, notamment les commandes réseau et la gestion des droits utilisateurs.",
+
+  appris: "J'ai appris qu'une installation réussie ne se limite pas à installer un système : il faut aussi vérifier la configuration réseau, les utilisateurs et le bon fonctionnement des services.",
+
+  autrement: "Je pourrais améliorer ma méthode en documentant davantage chaque étape de configuration avec des captures d'écran et des procédures détaillées.",
+
+  projet: {
+
+    titre: "R202 — Installation et administration de machines virtuelles",
+
+    lien: null,
+
+    desc: "Installation et configuration de machines virtuelles Linux et Windows avec administration de base et configuration réseau.",
+
+    images: [
+
+      {
+        src: "assets/img/traces/linus.jpeg",
+        caption: "Machine virtuelle Linux configurée"
+      },
+
+      {
+        src: "assets/img/traces/win.png",
+        caption: "Configuration réseau d'une machine virtuelle Windows"
+      }
+
+    ]
+
+  }
+
+}
+      }
+    ]
+  },
+
+  connecter: {
+    label: "Connecter",
+    icon: '<i class="bi bi-hdd-network-fill" style="color:#e07a3f"></i>',
+    color: "#e07a3f",
+    ac: [
+      {
+        code: "AC12.01",
+        label: "Mesurer, analyser et commenter les signaux",
+        reflexive: {
+          fait: "En TP, j'ai utilisé un oscilloscope pour observer et mesurer des signaux électriques : période, fréquence, amplitude et forme d'onde. J'ai également utilisé un multimètre pour des mesures de tension et de continuité.",
+          pourquoi: "Lire un signal ne suffit pas : il faut savoir interpréter ce qu'on voit pour détecter une anomalie ou valider le bon fonctionnement d'un équipement de transmission.",
+          comment: "J'ai branché les sondes de l'oscilloscope sur le signal à observer, réglé l'échelle temporelle et la sensibilité en tension, puis relevé les valeurs et rédigé une analyse.",
+          difficultes: "Le réglage de l'oscilloscope n'était pas intuitif au début : j'avais du mal à stabiliser l'affichage du signal et à choisir la bonne échelle pour que la mesure soit exploitable.",
+          appris: "J'ai compris que mesurer un signal demande méthode et rigueur. Une mauvaise échelle fausse complètement l'interprétation du signal.",
+          autrement: "Je m'exercerais d'abord sur des signaux simples (signal carré, sinusoïdal) avant de passer à des mesures plus complexes.",
+         projet: {
+  titre: "TP Mesure de signaux — S1",
+  lien: null,
+  desc: "Mesure et analyse de signaux électriques avec oscilloscope et multimètre.",
+  images: [
+    { src: "assets/img/traces/signal.jpeg",        caption: "Échantillonnage d'un signal analogique" }
+  ]
+}
+        }
+      },
+      {
+        code: "AC12.02",
+        label: "Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement",
+        reflexive: {
+          fait: "J'ai étudié les caractéristiques d'un système de transmission en analysant son spectre avec l'analyseur GSP730 : bande passante, atténuation, rapport signal/bruit. J'ai utilisé les notions de spectre, puissance, décibels et gain vues en R205/R206 pour modéliser mathématiquement le signal mesuré.",
+          pourquoi: "Pour comprendre quels paramètres sont pertinents pour assurer une transmission de qualité, et quels appareils utiliser pour les mesurer — problématique directe de la SAE 2.02.",
+          comment: "En combinant les ressources théoriques (R205 Signaux et Systèmes, R206 Analyse des signaux) avec les mesures pratiques. J'ai tracé le spectre théorique d'un signal sinusoïdal avant de le comparer à la mesure réelle sur l'analyseur.",
+          difficultes: "La modélisation mathématique du spectre (représentation en dBV) était abstraite sans lien avec une mesure concrète. Comprendre la différence entre RBW et VBW et leur impact sur l'affichage du spectre a nécessité des recherches complémentaires sur la documentation Rohde & Schwarz.",
+          appris: "J'ai compris que chaque paramètre de l'analyseur (RBW, span, niveau de référence) influence directement la qualité de la mesure. Un mauvais réglage donne un spectre illisible ou trompeur.",
+          autrement: "Je commencerais par faire les calculs théoriques (spectre attendu) sur papier avant de toucher l'appareil, pour avoir un point de comparaison immédiat.",  projet: { titre: "SAE 1.03 — Dispositif de Transmission", lien: "https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git",
+  desc: "Caractérisation de systèmes de transmission : atténuation, bande passante, rapport signal/bruit.",
+  images: [
+     { src: "assets/img/traces/echantillonage3.jpeg",  caption: "Comparaison des fréquences d'échantillonnage" },
+    { src: "assets/img/traces/studio_analoge.jpeg",   caption: "Studio analogique — étude d'un système de transmission" },
+    { src: "assets/img/traces/diagram_de_gaute.jpeg",  caption: "Analyse du signal en sortie du système de transmission" },
+  ]
+}
+        }
+      },
+      {
+      code: "AC12.03",
+
+label: "Déployer des supports de transmission",
+
+reflexive: {
+
+  fait: "Lors des TP et des cours de réseau, j'ai étudié les différents supports de transmission utilisés en informatique, notamment les câbles RJ45, coaxiaux et la fibre optique. J'ai également appris à identifier les différences entre un câble droit et un câble croisé ainsi que le rôle des différents connecteurs.",
+
+  pourquoi: "Le choix du support de transmission influence directement la qualité, la vitesse et la fiabilité de la communication réseau. Il est donc important de savoir reconnaître les différents types de câbles et leurs usages.",
+
+  comment: "En observant les câbles utilisés en TP, en étudiant les normes de câblage et en analysant les schémas de connexion vus en cours. J'ai aussi utilisé du matériel réseau pour identifier les connecteurs et comprendre leur fonctionnement.",
+
+  difficultes: "Au début, il n'était pas toujours facile de différencier certains types de câbles ou de retenir les usages spécifiques des câbles droits et croisés.",
+
+  appris: "J'ai appris que l'infrastructure physique est une base essentielle du réseau. Une mauvaise connexion ou un mauvais support peut empêcher toute communication entre les équipements.",
+
+  autrement: "Je souhaiterais approfondir davantage la partie pratique en réalisant plus de manipulations de câblage et de tests sur différents supports de transmission.",
+
+  projet: {
+
+    titre: "Étude des supports de transmission",
+
+    lien: null,
+
+    desc: "Identification et étude des différents supports de transmission utilisés en réseau : câble droit, câble croisé, câble coaxial et fibre optique.",
+
+    images: [
+
+      {
+        src: "assets/img/traces/cable.jpg",
+        caption: "Exemple de câblage RJ45 droit et croise"
+      },
+
+    ]
+
+  }
+
+}
+      },
+      {
           code: "AC12.04",
-          label: "Maîtriser les technologies de transmission sur longue distance",
-          reflexive: {
-            fait: "J'ai étudié les technologies WAN : ADSL, fibre optique, MPLS, et compris les mécanismes d'accès opérateur (PPPoE, NAT).",
-            pourquoi: "Connecter un réseau local à Internet ou à un site distant passe par des technologies WAN qu'un technicien réseau doit connaître.",
-            comment: "Cours théoriques R113, documentation des opérateurs télécoms, cas pratiques d'analyse de liaisons WAN.",
-            difficultes: "Comprendre les mécanismes d'encapsulation PPPoE et la différence entre adresse IP publique et privée dans un contexte NAT m'a pris du temps.",
-            appris: "J'ai compris le rôle des FAI, les débits réels vs théoriques et pourquoi la fibre est supérieure à l'ADSL pour les entreprises.",
-            autrement: "Je ferais une visite d'un nœud de raccordement optique (NRO) pour visualiser concrètement l'infrastructure opérateur.",
-            projet: { titre: "TP WAN - R113", lien: null, desc: "Étude comparative des technologies d'accès WAN et configuration d'une liaison NAT/PAT sur routeur Cisco." }
-          }
-        },
-        {
-          code: "AC12.05",
-          label: "Communiquer avec un client ou un utilisateur",
-          reflexive: {
-            fait: "Lors de mes stages, j'ai assisté des utilisateurs en expliquant les interventions effectuées, rédigé des comptes-rendus d'intervention.",
-            pourquoi: "Le technicien réseau n'est pas uniquement un expert technique : savoir communiquer clairement avec des non-techniciens est indispensable.",
-            comment: "Pratique lors des stages (Surface Informatique et DNL Informatique), reformulation des problèmes techniques en langage accessible.",
-            difficultes: "Adapter mon niveau de langage selon l'interlocuteur (technicien ou utilisateur novice) sans être condescendant a demandé de la pratique.",
-            appris: "La communication est aussi importante que la technique : un utilisateur rassuré et informé fait confiance au technicien et facilite son travail.",
-            autrement: "Je pratiquerais des jeux de rôle client/technicien en cours pour m'entraîner à expliquer des concepts techniques simplement.",
-            projet: { titre: "Stage — DNL Informatique (Cotonou, 2022)", lien: null, desc: "Assistance technique aux utilisateurs lors du stage : explication des interventions, rédaction de comptes-rendus." }
-          }
+        label: "Connecter les systèmes de ToIP",
+        reflexive: {
+          fait: "J'ai configuré un système de téléphonie sur IP (ToIP) avec des téléphones IP Fanvil : enregistrement sur un serveur SIP, configuration des paramètres réseau du téléphone (adresse IP, serveur SIP, identifiant) et test d'appels entre postes.",
+          pourquoi: "La ToIP est omniprésente dans les entreprises modernes. Comprendre son fonctionnement est essentiel pour déployer et maintenir des solutions de communication.",
+          comment: "J'ai accédé à l'interface web du téléphone Fanvil pour renseigner les paramètres SIP (adresse du serveur, numéro d'extension, mot de passe), puis vérifié l'enregistrement et testé un appel entre deux postes.",
+          difficultes: "La configuration du téléphone Fanvil n'était pas évidente au premier abord : naviguer dans les menus de l'interface web et identifier les bons paramètres SIP a demandé de consulter la documentation.",
+          appris: "J'ai découvert comment la voix transit sur un réseau IP comme n'importe quelle autre donnée, et compris l'importance de la qualité du réseau (latence, gigue) pour garantir une bonne qualité d'appel.",
+          autrement: "Je documenterais la configuration pas à pas avec captures d'écran pour pouvoir reproduire le déploiement rapidement.", projet: {
+  titre: "TP ToIP — S1",
+  lien: null,
+  desc: "Configuration d'un serveur SIP et de softphones pour la téléphonie sur IP.",
+  images: [
+    { src: "assets/img/traces/fanvil1.png",  caption: "Interface Fanvil — configuration du compte SIP" },
+    { src: "assets/img/traces/Fanvil2.png",  caption: "Fanvil — paramètres réseau du téléphone IP" },
+    { src: "assets/img/traces/Fanvil3.png",  caption: "Fanvil — enregistrement sur le serveur SIP réussi" },
+    { src: "assets/img/traces/Fanvil4.png",  caption: "Fanvil — test d'appel ToIP entre deux postes" }
+  ]
+}
         }
-      ]
+      },
+      {
+       code: "AC12.05",
+label: "Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur",
+
+reflexive: {
+
+  fait: "Lors des SAÉ et des travaux de groupe, j'ai présenté nos projets à l'oral devant les enseignants et expliqué certaines configurations réalisées. Durant les cours de communication, nous avons également effectué des mises en situation professionnelles et des appels à des entreprises.",
+
+  pourquoi: "Dans les métiers du réseau et de l'informatique, il est important de savoir expliquer clairement un problème technique ou une solution, aussi bien à des techniciens qu'à des personnes non spécialisées.",
+
+  comment: "J'ai appris à adapter mon vocabulaire selon l'interlocuteur, à structurer mes explications et à présenter les informations de manière claire pendant les présentations de SAÉ et les échanges en groupe.",
+
+  difficultes: "Au début, j'avais parfois du mal à parler avec assurance à l'oral et à simplifier certains termes techniques sans perdre le sens des explications.",
+
+  appris: "J'ai compris que la communication est une compétence essentielle dans l'informatique. Une bonne explication permet de mieux collaborer et d'éviter les incompréhensions.",
+
+  autrement: "Je pourrais encore améliorer ma prise de parole en pratiquant davantage de présentations orales et de mises en situation professionnelles.",
+
+ projet: {
+
+}  }
+      }
+    ]
+  },
+
+  programmer: {
+    label: "Programmer",
+    icon: '<i class="bi bi-code-slash" style="color:#f4c430"></i>',
+    color: "#f4c430",
+    ac: [
+      {
+        code: "AC13.01",
+        label: "Utiliser un système informatique et ses outils",
+        reflexive: {
+          fait: "J'utilise quotidiennement VS Code, Git/GitHub, le terminal Linux et les outils de développement du navigateur (DevTools) pour développer et maintenir mes projets.",
+          pourquoi: "Maîtriser son environnement de travail est la première étape pour être productif en développement et en administration système.",
+          comment: "Pratique quotidienne lors du développement du portfolio (SAE 14), commandes Bash fondamentales (ls, cd, mkdir, chmod, grep), scripts simples pour automatiser des tâches.",
+          difficultes: "Au début, travailler uniquement en ligne de commande sans interface graphique était déstabilisant. J'ai dû m'habituer à lire attentivement les messages d'erreur.",
+          appris: "La ligne de commande est bien plus puissante et rapide qu'une interface graphique pour administrer un système. Cette maîtrise est indispensable en R&T où la plupart des serveurs tournent sans GUI.",
+          autrement: "J'apprendrais Git dès le premier jour d'un projet plutôt que de l'introduire en cours de développement.",
+          projet: { titre: "Portfolio Web Responsive (SAE 14)", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Développement du portfolio avec VS Code, gestion du code source avec Git et déploiement via GitHub Pages." }
+        }
+      },
+      {
+        code: "AC13.02",
+        label: "Lire, exécuter, corriger et modifier un programme",
+        reflexive: {
+          fait: "En TP Python, j'ai lu et analysé des scripts existants pour comprendre leur fonctionnement, puis les ai modifiés pour les adapter à de nouveaux besoins et corrigé des bugs.",
+          pourquoi: "En entreprise, on travaille rarement sur du code écrit from scratch : savoir lire et modifier du code existant est une compétence clé.",
+          comment: "Lecture du code source, utilisation des DevTools pour déboguer, ajout de print() à des endroits stratégiques pour suivre l'exécution et identifier l'origine des erreurs.",
+          difficultes: "Comprendre un code que je n'avais pas écrit moi-même était difficile : il fallait lire ligne par ligne et comprendre la logique globale avant de modifier quoi que ce soit.",
+          appris: "Savoir lire du code est aussi important que savoir en écrire. Commenter son code et nommer clairement ses variables facilite énormément la maintenance et la collaboration.",
+          autrement: "Je commenterais chaque section du code au fur et à mesure de ma lecture pour garder une trace de ma compréhension.",
+          projet: { titre: "Portfolio Web — Adaptation du template SnapFolio", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Lecture, compréhension et modification du code JavaScript du template SnapFolio pour l'adapter au portfolio portfolio R&T." }
+        }
+      },
+      {
+        code: "AC13.03",
+        label: "Traduire un algorithme, dans un langage et pour un environnement donné",
+        reflexive: {
+          fait: "J'ai traduit des algorithmes décrits en pseudo-code en scripts Python fonctionnels : boucles, conditions, fonctions, gestion de listes et de chaînes de caractères.",
+          pourquoi: "L'algorithme est la logique ; le langage est l'outil. Savoir passer de l'un à l'autre est fondamental en programmation.",
+          comment: "En décomposant l'algorithme étape par étape, en identifiant les structures de contrôle nécessaires (if/else, for, while) et en implémentant progressivement, en testant à chaque étape.",
+          difficultes: "La gestion des indices et des boucles imbriquées était source d'erreurs fréquentes. J'ai appris à tester avec des cas simples avant de passer à des données plus complexes.",
+          appris: "Un algorithme bien conçu se traduit naturellement en code. Prendre le temps de réfléchir à la logique avant de coder fait gagner du temps sur le débogage.",
+          autrement: "Je dessinerais l'organigramme de l'algorithme sur papier avant de coder, pour séparer la réflexion logique de l'implémentation.",
+          projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: null, desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
+        }
+      },
+      {
+        code: "AC13.04",
+        label: "Connaître l'architecture et les technologies d'un site Web",
+        reflexive: {
+          fait: "J'ai conçu et développé ce portfolio (HTML5/CSS3/JS/Bootstrap) dans le cadre de la SAE 14, et une plateforme web avec PHP et MySQL (Plateforme ESGIS).",
+          pourquoi: "Les interfaces web sont omniprésentes dans les outils réseau (interfaces d'administration, dashboards). Comprendre leur architecture est utile en R&T.",
+          comment: "SAE 14, cours de développement web, documentation MDN, Bootstrap docs. HTML sémantique pour la structure, CSS pour la mise en forme, JS pour l'interactivité.",
+          difficultes: "La mise en page responsive était le point le plus difficile : faire en sorte que le site s'affiche correctement sur mobile et sur desktop nécessitait de comprendre les media queries.",
+          appris: "J'ai compris la séparation des rôles entre HTML (structure), CSS (présentation) et JS (comportement), et comment un navigateur interprète une page web.",
+          autrement: "Je concevrais la structure de la base de données avant de coder le backend pour éviter des restructurations en cours de projet.",
+      projet: {
+  titre: "Portfolio Web Responsive (SAE 14)",
+  lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git",
+  desc: "Conception et développement du portfolio : HTML5, CSS3, JS, Bootstrap 5, hébergé sur GitHub Pages.",
+  images: [
+    { src: "assets/img/traces/portfolio.png", caption: "Screenshot du portfolio en ligne " }
+    /* Ajoute un screenshot de ton portfolio ou de ton GitHub ici */
+  ]
+}  }
+      },
+      {
+
+code: "AC13.06",
+
+label: "S'intégrer dans un environnement propice au développement et au travail collaboratif",
+
+reflexive: {
+
+  fait: "Lors de la SAE 1.05, nous avons travaillé en groupe en utilisant GitLab afin de partager et centraliser notre code. J'ai également utilisé GitHub pour publier et versionner mes projets personnels comme mon portfolio et certains projets réalisés en BUT.",
+
+  pourquoi: "Le travail collaboratif est essentiel dans les métiers de l'informatique. Utiliser des outils de versionnement permet à plusieurs personnes de travailler sur un même projet tout en gardant un historique clair des modifications.",
+
+  comment: "J'ai utilisé Git et GitLab pour envoyer, récupérer et mettre à jour du code avec des commandes comme git add, git commit, git push et git pull. GitHub m'a ensuite permis de continuer à versionner mes projets personnels de manière autonome.",
+
+  difficultes: "Au début, comprendre le fonctionnement des branches, des dépôts distants et la gestion des conflits demandait de la rigueur. Il fallait aussi faire attention à bien synchroniser les versions du projet.",
+
+  appris: "J'ai appris qu'un bon travail collaboratif repose autant sur l'organisation que sur la technique. Les outils de versionnement permettent de sécuriser le projet et de mieux travailler en équipe.",
+
+  autrement: "Je pourrais améliorer encore mon organisation en utilisant davantage les branches et en adoptant des conventions plus précises pour les commits et les noms de versions.",
+
+  projet: {
+
+    titre: "Travaux collaboratifs — GitLab & GitHub",
+
+    lien: "<PRIVATE_URL>",
+
+    desc: "Utilisation de GitLab pour les projets collaboratifs de SAE et de GitHub pour le versionnement de mes projets personnels et scolaires.",
+
+    images: [
+      {
+        src: "assets/img/traces/git.png",
+        caption: "Historique des commits sur GitHub"
+      },
+
+      {
+        src: "assets/img/traces/git2.png",
+        caption: "Projet collaboratif versionné avec GitLab"
+      }
+    ]
+
+  }
+
+}
+      }
+    ]
+  },
+
+securiser: {
+  label: "Sécuriser",
+  icon: '<i class="bi bi-shield-fill-check" style="color:#7cb342"></i>',
+  color: "#7cb342",
+  ac: [
+    {
+      code: "AC14.01",
+      label: "Acquérir les principes fondamentaux de la cybersécurité",
+      reflexive: null
     },
-  
-    programmer: {
-      label: "Programmer",
-      icon: '<i class="bi bi-code-slash" style="color:#f4c430"></i>',
-      color: "#f4c430",
-      ac: [
-        {
-          code: "AC13.01",
-          label: "Utiliser un système informatique et ses outils",
-          reflexive: {
-            fait: "J'utilise quotidiennement VS Code, Git/GitHub, le terminal Linux et les outils de développement du navigateur (DevTools).",
-            pourquoi: "Maîtriser son environnement de travail est la première étape pour être productif en développement.",
-            comment: "Pratique quotidienne lors du développement du portfolio, tutoriels Git, documentation officielle des outils.",
-            difficultes: "La gestion des conflits Git lors de merges et la compréhension du modèle de branches ont été les points les plus complexes.",
-            appris: "Je maîtrise maintenant les commandes Git essentielles et suis à l'aise dans un environnement de développement professionnel.",
-            autrement: "J'apprendrais Git dès le premier jour d'un projet plutôt que de l'introduire en cours de développement.",
-            projet: { titre: "Portfolio Web Responsive", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Développement du portfolio avec VS Code, gestion du code source avec Git et déploiement via GitHub Pages." }
-          }
-        },
-        {
-          code: "AC13.02",
-          label: "Lire, comprendre, exécuter, corriger et modifier un programme",
-          reflexive: {
-            fait: "J'ai lu et modifié du code JavaScript existant (template SnapFolio) pour l'adapter à mes besoins, en corrigeant des bugs d'affichage.",
-            pourquoi: "En entreprise, on travaille rarement sur du code écrit from scratch : savoir lire et modifier du code existant est une compétence clé.",
-            comment: "Lecture du code source du template, utilisation des DevTools pour déboguer, recherches sur MDN et Stack Overflow.",
-            difficultes: "Comprendre le code JavaScript d'animation canvas sans en être l'auteur a été complexe, notamment les closures et le requestAnimationFrame.",
-            appris: "J'ai développé ma capacité à lire du code inconnu méthodiquement : identifier les fonctions, tracer l'exécution, isoler les bugs.",
-            autrement: "Je commenterais chaque section du code au fur et à mesure de ma lecture pour garder une trace de ma compréhension.",
-            projet: { titre: "Portfolio Web — Animation canvas", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Compréhension et adaptation du code d'animation réseau (canvas HTML5) du template SnapFolio." }
-          }
-        },
-        {
-          code: "AC13.03",
-          label: "Traduire un algorithme dans un langage et pour un environnement donné",
-          reflexive: {
-            fait: "J'ai implémenté des algorithmes de tri et de recherche en Python (certification Python Essentials 1) et en C lors des cours de programmation.",
-            pourquoi: "L'algorithme est la logique ; le langage est l'outil. Savoir passer de l'un à l'autre est fondamental en programmation.",
-            comment: "Cours de programmation S1, exercices Cisco Python Essentials, pratique sur Python.org et IDE Thonny.",
-            difficultes: "La gestion de la mémoire en C (pointeurs, allocation dynamique) a été très difficile à appréhender comparé à Python.",
-            appris: "J'ai compris que l'algorithme prime sur le langage : une fois la logique claire, l'implémentation dans n'importe quel langage devient plus accessible.",
-            autrement: "Je dessinerais l'organigramme de l'algorithme sur papier avant de coder, pour séparer la réflexion logique de l'implémentation.",
-            projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: null, desc: "Certification sur les bases de la programmation Python : variables, boucles, fonctions, structures de données." }
-          }
-        },
-        {
-          code: "AC13.04",
-          label: "Connaître l'architecture et les technologies d'un site Web",
-          reflexive: {
-            fait: "J'ai conçu et développé ce portfolio (HTML5/CSS3/JS/Bootstrap) et une plateforme web avec PHP et base de données MySQL (Plateforme ESGIS).",
-            pourquoi: "Les interfaces web sont omniprésentes dans les outils réseau (interfaces d'administration, dashboards). Comprendre leur architecture est utile.",
-            comment: "SAE 14, cours de développement web, documentation MDN, Bootstrap docs, tutoriels YouTube.",
-            difficultes: "La communication entre PHP et MySQL (requêtes préparées, gestion des erreurs SQL) et la sécurité des formulaires (injections SQL) ont été difficiles.",
-            appris: "Je comprends maintenant le modèle client-serveur, le rôle du backend et du frontend, et les enjeux de sécurité basiques d'une application web.",
-            autrement: "Je concevrais la structure de la base de données (MCD/MLD) avant de coder le backend pour éviter des restructurations en cours de projet.",
-            projet: { titre: "Plateforme ESGIS — Gestion de bulletins", lien: "https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git", desc: "Application web complète : frontend HTML/CSS, backend PHP, base de données MySQL pour la gestion des notes scolaires." }
-          }
-        },
-        {
-          code: "AC13.05",
-          label: "Utiliser les frameworks et bibliothèques",
-          reflexive: {
-            fait: "J'ai utilisé Bootstrap 5 pour la mise en page responsive, AOS pour les animations, et Font Awesome/Bootstrap Icons pour les icônes.",
-            pourquoi: "Les frameworks accélèrent le développement et garantissent un résultat professionnel et maintenu. C'est la pratique standard en entreprise.",
-            comment: "Documentation officielle de Bootstrap, exemples de la communauté, intégration dans le projet portfolio (SAE 14).",
-            difficultes: "Surcharger les styles par défaut de Bootstrap sans casser le responsive a demandé de comprendre la spécificité CSS et le système de grille.",
-            appris: "J'ai appris à utiliser la documentation officielle efficacement et à distinguer ce que je dois coder moi-même de ce que le framework fournit.",
-            autrement: "Je lirais la documentation en entier avant de commencer à utiliser un framework pour avoir une vue d'ensemble de ses capacités.",
-            projet: { titre: "Portfolio Web Responsive (SAE 14)", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Intégration et personnalisation de Bootstrap 5, AOS, Bootstrap Icons dans le portfolio personnel." }
-          }
-        }
-      ]
+    {
+      code: "AC14.02",
+      label: "Appliquer les politiques de sécurité des équipements réseau",
+      reflexive: null
     },
-  
-    securiser: {
-      label: "Sécuriser",
-      icon: '<i class="bi bi-shield-fill-check" style="color:#7cb342"></i>',
-      color: "#7cb342",
-      ac: [
-        {
-          code: "AC14.01",
-          label: "Acquérir les principes fondamentaux de la cybersécurité",
-          reflexive: {
-            fait: "J'ai suivi le MOOC SecNumacadémie de l'ANSSI (SAE 1.01) couvrant la sécurité des mots de passe, le chiffrement, la gestion des risques et les incidents.",
-            pourquoi: "La cybersécurité est mon parcours de spécialisation : maîtriser ses fondamentaux est la base de toute intervention sécurisée.",
-            comment: "Plateforme SecNumacadémie en autonomie, quiz de validation, lecture des fiches pratiques ANSSI.",
-            difficultes: "Les mécanismes de cryptographie asymétrique (PKI, certificats X.509) ont nécessité plusieurs relectures et recherches complémentaires.",
-            appris: "J'ai pris conscience que la sécurité est autant organisationnelle et humaine que technique. Le facteur humain reste le maillon le plus faible.",
-            autrement: "J'aurais cherché des vidéos explicatives sur la cryptographie en parallèle du MOOC pour consolider la compréhension théorique.",
-            projet: { titre: "SAE 1.01 — Hygiène Informatique (ANSSI)", lien: "https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git", desc: "Obtention de l'attestation ANSSI SecNumacadémie : modules sécurité des systèmes, données personnelles, incidents et cryptographie." }
-          }
-        },
-        {
-          code: "AC14.02",
-          label: "Appliquer les politiques de sécurité des équipements réseau",
-          reflexive: {
-            fait: "J'ai configuré des ACL (Access Control Lists) sur des routeurs Cisco pour filtrer le trafic, et activé des mécanismes de sécurité sur les switchs (port security).",
-            pourquoi: "Sans politiques de sécurité sur les équipements, tout réseau est vulnérable. C'est la traduction concrète des principes de sécurité en configurations.",
-            comment: "TP de sécurisation réseau, Packet Tracer pour les ACL, documentation Cisco sur la sécurité des switches.",
-            difficultes: "La logique des ACL (standard vs étendue, numérotation, ordre des règles) et l'effet du deny implicite final ont été difficiles à intégrer.",
-            appris: "J'ai compris que la sécurité réseau demande une approche systématique : identifier les flux légitimes, bloquer tout le reste (principe du moindre privilège).",
-            autrement: "Je modéliserais d'abord la matrice des flux autorisés sur papier avant de configurer les ACL.",
-            projet: { titre: "TP Sécurité réseau - Cisco ACL", lien: null, desc: "Configuration d'ACL étendues et standard sur routeur Cisco pour filtrer le trafic selon la politique de sécurité définie." }
-          }
-        },
-        {
-          code: "AC14.03",
-          label: "Déceler des compromissions dans un système informatique",
-          reflexive: {
-            fait: "J'ai analysé des logs système Linux et des captures Wireshark pour identifier des comportements anormaux (scans de ports, connexions suspectes).",
-            pourquoi: "Détecter une compromission rapidement limite l'impact d'une attaque. C'est une compétence clé en cybersécurité défensive.",
-            comment: "TP d'analyse de logs, outils : grep, awk, Wireshark, introduction à l'analyse forensique.",
-            difficultes: "Distinguer un trafic anormal d'un trafic légitime inhabituel dans des logs volumineux a été chronophage sans outils d'automatisation.",
-            appris: "J'ai compris l'importance des outils SIEM et de la centralisation des logs pour détecter des compromissions à grande échelle.",
-            autrement: "Je mettrais en place un lab personnel avec des outils open source (ELK Stack, Snort) pour pratiquer l'analyse en dehors des cours.",
-            projet: { titre: "TP Analyse de logs & Wireshark", lien: null, desc: "Analyse de captures réseau et logs système pour identifier des indicateurs de compromission (scan Nmap, brute force SSH)." }
-          }
-        },
-        {
-          code: "AC14.04",
-          label: "Respecter les réglementations en vigueur et les bonnes pratiques",
-          reflexive: {
-            fait: "J'ai étudié le RGPD, les obligations ANSSI pour les opérateurs d'importance vitale (OIV), et appliqué les recommandations de sécurité dans mes projets.",
-            pourquoi: "Un technicien réseau opère dans un cadre légal et réglementaire. Ignorer les règles expose l'entreprise et l'individu à des sanctions.",
-            comment: "Cours de droit du numérique, guide RGPD de la CNIL, recommandations ANSSI publiées en ligne.",
-            difficultes: "Comprendre les obligations spécifiques selon le secteur d'activité (santé, finance, défense) et la notion de responsabilité du sous-traitant.",
-            appris: "J'ai compris que la conformité n'est pas un frein mais une garantie : elle protège autant les utilisateurs que l'organisation.",
-            autrement: "Je créerais une grille de conformité pour chaque projet afin de vérifier systématiquement le respect des règles applicables.",
-            projet: { titre: "SAE 1.01 — Hygiène Informatique (ANSSI)", lien: "https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git", desc: "Application des recommandations ANSSI sur la gestion des mots de passe, mises à jour et données personnelles dans le cadre du MOOC SecNumacadémie." }
-          }
-        }
-      ]
+    {
+      code: "AC14.03",
+      label: "Déceler des compromissions dans un système informatique",
+      reflexive: null
     },
-  
-    surveiller: {
-      label: "Surveiller",
-      icon: '<i class="bi bi-eye-fill" style="color:#0099cc"></i>',
-      color: "#0099cc",
-      ac: [
-        {
-          code: "AC15.01",
-          label: "Mesurer et analyser les performances d'un réseau",
-          reflexive: {
-            fait: "J'ai utilisé des outils de mesure (iperf, ping, traceroute) pour évaluer la bande passante, la latence et la gigue d'une liaison réseau.",
-            pourquoi: "Surveiller les performances permet de détecter une dégradation avant qu'elle impacte les utilisateurs et d'anticiper les besoins en capacité.",
-            comment: "TP de supervision réseau, outils iperf3 et Wireshark, interprétation des métriques réseau clés.",
-            difficultes: "Interpréter les résultats iperf (bande passante TCP vs UDP, jitter) et comprendre pourquoi les performances mesurées diffèrent du débit théorique.",
-            appris: "J'ai compris que les performances réseau dépendent de nombreux facteurs (charge, protocole, distance) et qu'une mesure isolée ne suffit pas.",
-            autrement: "Je mettrais en place des mesures régulières (benchmarks) pour avoir une baseline et détecter les dérives dans le temps.",
-            projet: { titre: "TP Supervision réseau - S1", lien: null, desc: "Mesure des performances d'une liaison réseau avec iperf3 : bande passante, latence, gigue en charge normale et dégradée." }
-          }
-        },
-        {
-          code: "AC15.02",
-          label: "Caractériser et analyser le trafic réseau",
-          reflexive: {
-            fait: "J'ai capturé et analysé du trafic réseau avec Wireshark : identification des protocoles, reconstruction de flux TCP, détection d'anomalies.",
-            pourquoi: "Analyser le trafic permet de comprendre ce qui circule sur le réseau, d'identifier des goulets d'étranglement et des comportements suspects.",
-            comment: "TP Wireshark, filtres de capture et d'affichage, analyse de sessions HTTP/DNS/ICMP.",
-            difficultes: "La quantité de trames lors d'une capture longue est difficile à analyser manuellement. Apprendre à filtrer efficacement a pris du temps.",
-            appris: "Je suis capable de filtrer le trafic Wireshark pour isoler rapidement les flux pertinents et identifier des anomalies protocolaires.",
-            autrement: "J'apprendrais les filtres Wireshark avancés (BPF) dès le début plutôt que de parcourir manuellement des milliers de trames.",
-            projet: { titre: "TP Wireshark — Analyse de trafic", lien: null, desc: "Capture et analyse de trafic réseau : identification de protocoles, reconstruction de sessions, détection d'anomalies de comportement." }
-          }
-        },
-        {
-          code: "AC15.03",
-          label: "Maîtriser les outils de supervision réseau",
-          reflexive: {
-            fait: "J'ai découvert des outils de supervision comme Nagios et PRTG : installation, configuration des hôtes surveillés, création d'alertes.",
-            pourquoi: "La supervision proactive permet de détecter des pannes avant les utilisateurs et de garantir les SLA. C'est un outil du quotidien des équipes réseau.",
-            comment: "Introduction théorique en cours, TP de configuration Nagios sur VM Linux, documentation officielle.",
-            difficultes: "La configuration des plugins Nagios et la compréhension du modèle hôtes/services/contacts a été complexe au premier abord.",
-            appris: "J'ai compris l'architecture d'un outil de supervision et l'importance des seuils d'alerte (warning/critical) bien calibrés.",
-            autrement: "Je déploierais un outil de supervision moderne (Zabbix, Grafana+Prometheus) pour comparer les approches et comprendre l'évolution du domaine.",
-            projet: { titre: "TP Supervision Nagios - S1", lien: null, desc: "Déploiement et configuration de Nagios Core sur Ubuntu : surveillance des équipements réseau, alertes email, tableaux de bord." }
-          }
-        },
-        {
-          code: "AC15.04",
-          label: "Documenter les réseaux et les activités de surveillance",
-          reflexive: {
-            fait: "J'ai rédigé des schémas réseau (Packet Tracer, draw.io), des tableaux d'adressage et des rapports d'incidents lors des TP et de mes stages.",
-            pourquoi: "Un réseau non documenté est un réseau non maintenable. La documentation est la mémoire collective d'une équipe réseau.",
-            comment: "Pratique lors des TP, outils draw.io et Packet Tracer pour les schémas, rédaction de rapports structurés.",
-            difficultes: "Maintenir la documentation à jour quand la configuration évolue est difficile : j'ai souvent eu des schémas désynchronisés de la réalité.",
-            appris: "J'ai appris qu'une bonne documentation doit être simple, visuelle et maintenue en temps réel — pas en fin de projet.",
-            autrement: "J'adopterais une approche 'documentation as code' : versionner les schémas réseau avec Git pour tracer les évolutions.",
-            projet: { titre: "Portfolio — Documentation des projets", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Rédaction de descriptions techniques pour chaque projet du portfolio : objectifs, méthodes, outils, résultats." }
-          }
-        }
-      ]
+    {
+      code: "AC14.04",
+      label: "Respecter les réglementations en vigueur et les bonnes pratiques",
+      reflexive: null
     }
-  };
-  
-  let currentCompetence = null;
+  ]
+},
+
+  surveiller: {
+  label: "Surveiller",
+  icon: '<i class="bi bi-eye-fill" style="color:#0099cc"></i>',
+  color: "#0099cc",
+  ac: [
+    {
+      code: "AC15.01",
+      label: "Mesurer et analyser les performances d'un réseau",
+      reflexive: null
+    },
+    {
+      code: "AC15.02",
+      label: "Caractériser et analyser le trafic réseau",
+      reflexive: null
+    },
+    {
+      code: "AC15.03",
+      label: "Maîtriser les outils de supervision réseau",
+      reflexive: null
+    },
+    {
+      code: "AC15.04",
+      label: "Documenter les réseaux et les activités de surveillance",
+      reflexive: null
+    }
+  ]
+}
+};
   
   function openCompetence(id) {
     currentCompetence = id;
@@ -1276,44 +1368,276 @@ document.addEventListener('keydown', function(e) {
     document.body.style.overflow = 'hidden';
   }
   
-  function openReflexive(compId, acIndex) {
-    const data = spData[compId];
-    const ac = data.ac[acIndex];
-    const r = ac.reflexive;
-  
-    document.getElementById('sp-ref-ac-code').textContent = ac.code;
-    document.getElementById('sp-ref-ac-code').style.cssText = `background:${data.color}22;color:${data.color};border:1px solid ${data.color}44`;
-    document.getElementById('sp-ref-ac-label').textContent = ac.label;
-  
-    const questions = [
-      { icon: 'bi-check2-circle',        title: 'Ce que j\'ai fait',                  text: r.fait },
-      { icon: 'bi-question-circle',      title: 'Pourquoi je l\'ai fait',             text: r.pourquoi },
-      { icon: 'bi-tools',                title: 'Comment je l\'ai fait',              text: r.comment },
-      { icon: 'bi-exclamation-triangle', title: 'Mes difficultés',                    text: r.difficultes },
-      { icon: 'bi-lightbulb',            title: 'Ce que j\'en ai appris',             text: r.appris },
-      { icon: 'bi-arrow-repeat',         title: 'Ce que je ferais autrement',         text: r.autrement },
-    ];
-  
-    document.getElementById('sp-reflexive-grid').innerHTML = questions.map(q => `
+ function openReflexive(compId, acIndex) {
+
+  const data = spData[compId];
+  const ac = data.ac[acIndex];
+  const r = ac.reflexive;
+
+  document.getElementById('sp-ref-ac-code').textContent = ac.code;
+
+  document.getElementById('sp-ref-ac-code').style.cssText =
+    `background:${data.color}22;color:${data.color};
+     border:1px solid ${data.color}44`;
+
+  document.getElementById('sp-ref-ac-label').textContent = ac.label;
+
+  const questions = [
+    { icon: 'bi-check2-circle', title: 'Ce que j\'ai fait', text: r.fait },
+    { icon: 'bi-question-circle', title: 'Pourquoi je l\'ai fait', text: r.pourquoi },
+    { icon: 'bi-tools', title: 'Comment je l\'ai fait', text: r.comment },
+    { icon: 'bi-exclamation-triangle', title: 'Mes difficultés', text: r.difficultes },
+    { icon: 'bi-lightbulb', title: 'Ce que j\'en ai appris', text: r.appris },
+    { icon: 'bi-arrow-repeat', title: 'Ce que je ferais autrement', text: r.autrement },
+  ];
+
+  document.getElementById('sp-reflexive-grid').innerHTML =
+    questions.map(q => `
       <div class="sp-ref-card">
-        <div class="sp-ref-card-icon"><i class="bi ${q.icon}"></i></div>
+        <div class="sp-ref-card-icon">
+          <i class="bi ${q.icon}"></i>
+        </div>
         <h5>${q.title}</h5>
         <p>${q.text}</p>
       </div>
     `).join('');
-  
-    const trace = r.projet;
-    document.getElementById('sp-project-trace').innerHTML = `
-      <h5><i class="bi bi-paperclip"></i> Exemple de trace — projet lié</h5>
-      <p>
-        <strong style="color:var(--text-light)">${trace.titre}</strong><br>
-        ${trace.desc}
-        ${trace.lien ? ` — <a href="${trace.lien}" target="_blank"><i class="bi bi-github"></i> Voir sur GitHub</a>` : ''}
-      </p>
-    `;
-  
-    document.getElementById('sp-reflexive-overlay').classList.add('active');
+
+  // =========================
+  // TRACE PROJET
+  // =========================
+
+  const trace = r.projet;
+
+  document.getElementById('sp-project-trace').innerHTML = `
+    <h5><i class="bi bi-paperclip"></i> Exemple de trace — projet lié</h5>
+
+    <p>
+      <strong style="color:var(--text-light)">
+        ${trace.titre}
+      </strong><br>
+
+      ${trace.desc}
+
+      ${trace.lien
+        ? ` — <a href="${trace.lien}" target="_blank">
+              <i class="bi bi-github"></i> Voir sur GitHub
+            </a>`
+        : ''
+      }
+    </p>
+
+    ${trace.images && trace.images.length > 0 ? `
+      <div style="margin-top:14px;">
+
+        <p style="
+          font-size:0.78rem;
+          font-weight:700;
+          text-transform:uppercase;
+          letter-spacing:0.08em;
+          color:var(--accent-color);
+          margin-bottom:10px;
+        ">
+          <i class="bi bi-images"></i>
+          Captures / Preuves visuelles
+        </p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+          ${trace.images.map(img => `
+
+            <a href="${img.src}"
+               data-gallery="trace-gallery"
+               class="glightbox"
+               data-description="${img.caption}">
+
+              <img
+                src="${img.src}"
+                alt="${img.caption}"
+
+                style="
+                  width:120px;
+                  height:80px;
+                  object-fit:cover;
+                  border-radius:8px;
+                  border:2px solid rgba(0,102,204,0.3);
+                  cursor:zoom-in;
+                  transition:transform 0.2s,border-color 0.2s;
+                "
+
+                onmouseover="
+                  this.style.transform='scale(1.05)';
+                  this.style.borderColor='var(--accent-color)'
+                "
+
+                onmouseout="
+                  this.style.transform='scale(1)';
+                  this.style.borderColor='rgba(0,102,204,0.3)'
+                "
+              />
+
+            </a>
+
+          `).join('')}
+
+        </div>
+
+      </div>
+    ` : ''}
+  `;
+
+  // Réinitialise GLightbox
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({
+      selector: '.glightbox'
+    });
   }
+
+  // Ouvre overlay
+  document.getElementById('sp-reflexive-overlay')
+    .classList.add('active');
+}
+
+  
+   
+    /* ================================================
+   MODIFICATION À FAIRE DANS main.js
+   
+   Dans la fonction openReflexive(), trouve cette ligne :
+   
+       document.getElementById('sp-project-trace').innerHTML = `...`;
+   
+   Et REMPLACE tout le bloc innerHTML par celui ci-dessous.
+   ================================================ */
+
+// REMPLACE l'ancien innerHTML de sp-project-trace par :
+document.getElementById('sp-project-trace').innerHTML = `
+  <h5><i class="bi bi-paperclip"></i> Exemple de trace — projet lié</h5>
+  <p>
+    <strong style="color:var(--text-light)">${trace.titre}</strong><br>
+    ${trace.desc}
+    ${trace.lien ? ` — <a href="${trace.lien}" target="_blank"><i class="bi bi-github"></i> Voir sur GitHub</a>` : ''}
+  </p>
+  ${trace.images && trace.images.length > 0 ? `
+  <div style="margin-top:14px;">
+    <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-color);margin-bottom:10px;">
+      <i class="bi bi-images"></i> Captures / Preuves visuelles
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      ${trace.images.map(img => `
+        <a href="${img.src}" data-gallery="trace-gallery" class="glightbox" data-description="${img.caption}">
+          <img src="${img.src}" alt="${img.caption}"
+            style="width:120px;height:80px;object-fit:cover;border-radius:8px;
+                   border:2px solid rgba(0,102,204,0.3);cursor:zoom-in;
+                   transition:transform 0.2s,border-color 0.2s;"
+            onmouseover="this.style.transform='scale(1.05)';this.style.borderColor='var(--accent-color)'"
+            onmouseout="this.style.transform='scale(1)';this.style.borderColor='rgba(0,102,204,0.3)'"
+          />
+        </a>
+      `).join('')}
+    </div>
+  </div>
+  ` : ''}
+`;
+
+// Réinitialise glightbox pour les nouvelles images
+if (typeof GLightbox !== 'undefined') {
+  GLightbox({ selector: '.glightbox' });
+}
+
+
+/* ================================================
+   MODIFICATION DU spData
+   
+   Pour CHAQUE AC dans spData, ajoute un champ "images"
+   dans l'objet "projet". Exemple :
+   
+   projet: {
+     titre: "SAE 1.03 ...",
+     lien: "https://github.com/...",
+     desc: "...",
+     images: [                          ← AJOUTE CE CHAMP
+       { src: "assets/img/traces/ac1103_vlan.png",   caption: "Config VLAN sur switch Cisco" },
+       { src: "assets/img/traces/ac1103_ping.png",   caption: "Test de connectivité inter-VLAN" }
+     ]
+   }
+   
+   Si tu n'as pas d'image pour un AC, mets juste :
+   images: []
+   
+   ================================================ */
+
+
+/* ================================================
+   LISTE COMPLÈTE DES IMAGES À PRÉPARER CE SOIR
+   (1-2 par AC, priorité aux AC avec étoile ⭐)
+   ================================================
+
+ADMINISTRER
+-----------
+⭐ AC11.03 — Config réseau
+   → Capture show running-config ou show ip int brief dans Packet Tracer
+   → Capture topologie Packet Tracer avec VLANs
+
+⭐ AC11.04 — Systèmes d'exploitation  
+   → Capture terminal Linux avec commandes ip addr ou ifconfig
+   → Capture résultat de ip a ou ifconfig
+
+⭐ AC11.06 — Poste client
+   → Capture paramètres réseau d'un poste (IP, masque, passerelle)
+   → Capture ping réussi vers la passerelle
+
+AC11.01 — Électricité
+   → Photo d'un multimètre ou schéma de cours scanné
+
+AC11.02 — Architecture systèmes
+   → Capture d'une trame Wireshark OU schéma OSI annoté
+
+AC11.05 — Diagnostic
+   → Capture d'un ping avec perte de paquets puis réussi
+
+CONNECTER
+---------
+⭐ AC12.01 — Mesure signaux
+   → Photo d'un oscilloscope en TP OU capture d'un signal simulé
+   
+⭐ AC12.03 — Supports de transmission
+   → Photo d'un câble RJ45 serties OU d'une baie de brassage
+
+⭐ AC12.04 — ToIP
+   → Capture d'un softphone configuré (Linphone, Zoiper...)
+   → Capture d'un appel en cours
+
+AC12.02 — Systèmes transmission
+   → Schéma de cours scanné avec formules
+
+AC12.05 — Communication
+   → Photo d'une présentation en TP OU extrait d'un compte-rendu
+
+PROGRAMMER
+----------
+⭐ AC13.01 — Outils informatiques
+   → Capture de ton terminal avec des commandes Git
+
+⭐ AC13.04 — Site web
+   → Screenshot de ton portfolio en ligne (glightbox sur navigateur)
+   → Screenshot du code VS Code
+
+⭐ AC13.06 — Travail collaboratif
+   → Screenshot de ton GitHub avec l'historique des commits
+
+AC13.02 — Lire/corriger programme
+   → Screenshot d'un script Python dans VS Code
+
+AC13.03 — Traduire algorithme
+   → Screenshot du certificat Python Essentials Cisco
+
+AC13.05 — Bases de données
+   → Screenshot d'une requête SQL ou du schéma de la BDD ESGIS
+
+================================================
+   DOSSIER À CRÉER : assets/img/traces/
+   Nomme tes fichiers : ac1103_vlan.png, ac1104_linux.png, etc.
+================================================ */
   
   function closeAcOverlay() {
     document.getElementById('sp-ac-overlay').classList.remove('active');
