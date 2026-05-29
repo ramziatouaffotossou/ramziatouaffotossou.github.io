@@ -1207,7 +1207,7 @@ reflexive: {
           difficultes: "Comprendre un code que je n'avais pas écrit moi-même était difficile : il fallait lire ligne par ligne et comprendre la logique globale avant de modifier quoi que ce soit.",
           appris: "Savoir lire du code est aussi important que savoir en écrire. Commenter son code et nommer clairement ses variables facilite énormément la maintenance et la collaboration.",
           autrement: "Je commenterais chaque section du code au fur et à mesure de ma lecture pour garder une trace de ma compréhension.",
-          projet: { titre: "Portfolio Web — Adaptation du template SnapFolio", lien: "https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git", desc: "Lecture, compréhension et modification du code JavaScript du template SnapFolio pour l'adapter au portfolio portfolio R&T." }
+         projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: "https://ramziatouaffotossou.github.io/docs/", desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
         }
       },
       {
@@ -1220,7 +1220,7 @@ reflexive: {
           difficultes: "La gestion des indices et des boucles imbriquées était source d'erreurs fréquentes. J'ai appris à tester avec des cas simples avant de passer à des données plus complexes.",
           appris: "Un algorithme bien conçu se traduit naturellement en code. Prendre le temps de réfléchir à la logique avant de coder fait gagner du temps sur le débogage.",
           autrement: "Je dessinerais l'organigramme de l'algorithme sur papier avant de coder, pour séparer la réflexion logique de l'implémentation.",
-          projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: null, desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
+         projet: { titre: "Python Essentials 1 — Cisco/Python Institute (2024)", lien: "https://ramziatouaffotossou.github.io/docs/", desc: "Certification sur les bases de la programmation Python : traduction d'algorithmes en code, variables, boucles, fonctions, structures de données." }
         }
       },
       {
