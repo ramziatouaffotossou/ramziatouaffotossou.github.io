@@ -854,6 +854,48 @@ const projectsData = {
       { code: "CE1.04", label: "en respectant les règles métiers" },
       { code: "CE1.05", label: "en assurant une veille technologique" }
     ]
+  },
+  "greenbite": {
+    title: "GreenBite — E-commerce & Supervision IoT",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/greenbite",
+    description: "Conception d'un site e-commerce de snacks sains avec back-end Flask, base de données MySQL et déploiement conteneurisé via Docker. Supervision de la plateforme via des capteurs IoT.",
+    tags: ["Flask", "MySQL", "Docker", "IoT"],
+    badge: "Programmer",
+    badgeClass: "badge-programmer-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
+      { code: "CE1.04", label: "en respectant les règles métiers" }
+    ]
+  },
+  "reseau-entreprise": {
+    title: "Réseau d'Entreprise Sécurisé",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/reseau-entreprise-securise",
+    description: "Conception et simulation sous Cisco Packet Tracer d'un réseau d'entreprise sécurisé : VLAN, routage inter-VLAN, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, adressage IPv4/IPv6 et sécurisation des accès.",
+    tags: ["VLAN", "HSRP", "STP", "EtherChannel", "IPv4/IPv6", "Packet Tracer"],
+    badge: "Connecter",
+    badgeClass: "badge-connecter-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.02", label: "en respectant les principes fondamentaux de la sécurité informatique" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" }
+    ]
+  },
+  "telephonie-ip": {
+    title: "Infrastructure de Téléphonie IP",
+    date: "2025 - 2026",
+    github: "https://github.com/ramziatouaffotossou/telephonie-ip-asterisk",
+    description: "Déploiement d'une infrastructure de téléphonie IP avec Asterisk : configuration SIP, téléphones IP (Fanvil/Cisco), serveur TFTP, messagerie vocale et validation des communications.",
+    tags: ["Asterisk", "SIP", "VoIP", "TFTP"],
+    badge: "Administrer",
+    badgeClass: "badge-administrer-modal",
+    ce: [
+      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
+      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
+      { code: "CE1.05", label: "en assurant une veille technologique" }
+    ]
   }
 };
 
