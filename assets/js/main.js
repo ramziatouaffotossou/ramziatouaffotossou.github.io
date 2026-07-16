@@ -388,8 +388,6 @@ const translations = {
     sae101Desc: "Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique. Sensibilisation aux risques cyber et obtention de l'attestation ANSSI.",
     sae103Title: "SAE 1.03 - Dispositif de Transmission",
     sae103Desc: "Découverte et étude approfondie des dispositifs de transmission de données dans les réseaux..",
-    esgisTi: "Plateforme ESGIS",
-    esgisDesc: "Développement d'une plateforme web dans le cadre d'un projet scolaire. Création d'interfaces et mise en place d'une base de donnée.",
     portfolioWebTitle: "Portfolio Web Responsive",
     portfolioWebDesc: "Création de ce portfolio personnel avec design moderne, animations interactives et réseau de nodes en arrière-plan. Site responsive hébergé sur GitHub.",
     
@@ -546,8 +544,6 @@ const translations = {
     sae101Desc: "Comprehensive training on cybersecurity and IT hygiene best practices. Cyber risk awareness and ANSSI certification obtained.",
     sae103Title: "SAE 1.03 - Transmission Devices",
     sae103Desc: "Discovery and in-depth study of data transmission devices in networks.",
-    esgisTitle: "ESGIS Platform",
-    esgisDesc: "Development of a web platform as part of a school project. Interface creation and database implementation.",
     portfolioWebTitle: "Responsive Web Portfolio",
     portfolioWebDesc: "Creation of this personal portfolio with modern design, interactive animations and network nodes background. Responsive site hosted on GitHub.",
     
@@ -713,17 +709,17 @@ function switchLanguage() {
   document.querySelectorAll('.portfolio-filters li')[5].innerHTML = `<i class="bi bi-eye"></i> ${t.monitor}`;
   
   // Projects
-  document.querySelectorAll('.portfolio-card-title')[0].textContent = t.sae101Title;
-  document.querySelectorAll('.portfolio-card-description')[0].textContent = t.sae101Desc;
-  
-  document.querySelectorAll('.portfolio-card-title')[1].textContent = t.sae103Title;
-  document.querySelectorAll('.portfolio-card-description')[1].textContent = t.sae103Desc;
-  
-  document.querySelectorAll('.portfolio-card-title')[2].textContent = t.esgisTitle;
-  document.querySelectorAll('.portfolio-card-description')[2].textContent = t.esgisDesc;
-  
-  document.querySelectorAll('.portfolio-card-title')[3].textContent = t.portfolioWebTitle;
-  document.querySelectorAll('.portfolio-card-description')[3].textContent = t.portfolioWebDesc;
+  const projTitleEl = (id) => document.querySelector(`[data-project="${id}"] .portfolio-card-title`);
+  const projDescEl = (id) => document.querySelector(`[data-project="${id}"] .portfolio-card-description`);
+
+  if (projTitleEl('sae101')) projTitleEl('sae101').textContent = t.sae101Title;
+  if (projDescEl('sae101')) projDescEl('sae101').textContent = t.sae101Desc;
+
+  if (projTitleEl('sae103')) projTitleEl('sae103').textContent = t.sae103Title;
+  if (projDescEl('sae103')) projDescEl('sae103').textContent = t.sae103Desc;
+
+  if (projTitleEl('portfolio')) projTitleEl('portfolio').textContent = t.portfolioWebTitle;
+  if (projDescEl('portfolio')) projDescEl('portfolio').textContent = t.portfolioWebDesc;
   
 
   
@@ -820,20 +816,6 @@ const projectsData = {
     tags: ["Transmission", "Signal"],
     badge: "Connecter",
     badgeClass: "badge-connecter-modal",
-    ce: [
-      { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
-      { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
-      { code: "CE1.04", label: "en respectant les règles métiers" }
-    ]
-  },
-  "esgis": {
-    title: "Plateforme ESGIS",
-    date: "2024 - 2025",
-    github: "https://github.com/ramziatouaffotossou/plateform_gestion_bulletin.github.io.git",
-    description: "Développement d'une plateforme web de gestion de bulletins scolaires dans le cadre d'un projet scolaire. Création d'interfaces et mise en place d'une base de données.",
-    tags: ["Web", "HTML/CSS", "PHP"],
-    badge: "Programmer",
-    badgeClass: "badge-programmer-modal",
     ce: [
       { code: "CE1.01", label: "en choisissant les solutions et technologies réseaux adaptées" },
       { code: "CE1.03", label: "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements" },
