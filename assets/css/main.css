@@ -1574,3 +1574,11 @@
     .sp-reflexive-grid { grid-template-columns: 1fr; }
     .sp-overlay-panel { border-radius: 14px; }
   }
+
+
+
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;margin-bottom:22px;border:1px solid rgba(46,204,113,.4);background:rgba(46,204,113,.08);color:#4be3a3;border-radius:999px;font-size:.9rem;font-weight:500}
+.hero-badge-dot{width:9px;height:9px;border-radius:50%;background:#2ecc71;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%{box-shadow:0 0 0 0 rgba(46,204,113,.6)}70%{box-shadow:0 0 0 8px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+.cert-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:6px 14px;border:1px solid var(--primary-color);border-radius:8px;color:var(--primary-color);font-size:.85rem;text-decoration:none;transition:.2s}
+.cert-link:hover{background:var(--primary-color);color:#fff}
