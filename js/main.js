@@ -270,532 +270,223 @@
 // MULTILANGUAGE SYSTEM FR/EN
 // ========================================
 
-const translations = {
-  fr: {
-    // Hero Section
-    greeting: "Bonjour,",
-    iAm: "Je suis",
-    role: "Future Experte en Cybersécurité",
-    desc: "Originaire du Bénin, j'ai développé mon intérêt pour l'informatique au Lycée Technique Coulibaly. Après deux stages en maintenance informatique, je suis actuellement en première année de BUT Réseaux et Télécommunications, parcours cybersécurité, à l'IUT de Béthune.\n\nMon objectif professionnel est de devenir experte en sécurité des systèmes d'information et de contribuer à la protection des infrastructures numériques dans un environnement en constante évolution.",
-    myProjects: "Mes Projets",
-    myCV: "Mon CV",
-    
-    // Menu tooltips
-    home: "Accueil",
-    cv: "CV",
-    portfolio: "Portfolio",
-    
-    // Section Titles
-    cvTitle: "Curriculum Vitae",
-    portfolioTitle: "Portfolio - Projets R&T",
-    
-    // CV Sidebar
-    contactInfo: "Informations de Contact",
-    languages: "Langues",
-    technicalSkills: "Compétences Techniques",
-    
-    // Languages
-    frenchNative: "Français : Courant",
-    englishInter: "Anglais : Intermédiaire",
-    
-    // Technical Skills
-    networkAdmin: "Administration réseau (Débutant)",
-    packetTracer: "Packet Tracer",
-    osConfig: "Installation et configuration des SE",
-    wordpress: "Création de sites web WordPress",
-    htmlCss: "HTML & CSS",
-    programming: "Programmmation Langage C & Python",
+(function () {
+  // FR (texte exact du HTML) -> EN. Un texte absent d'ici reste en français, sans erreur.
+  const EN = {
+    // Hero
+    "Bonjour,": "Hello,",
+    "Je suis": "I'm",
+    "Originaire du Bénin, j'ai développé mon intérêt pour l'informatique au Lycée Technique Coulibaly. Après deux stages en maintenance informatique, je poursuis actuellement ma formation en deuxième année de BUT Réseaux & Télécommunications à l'IUT de Béthune.":
+      "Originally from Benin, I developed my interest in IT at Lycée Technique Coulibaly. After two IT maintenance internships, I am currently in my second year of the BUT Networks & Telecommunications degree at IUT de Béthune.",
+    "Mon CV (PDF)": "My CV (PDF)",
+    "Mes Projets": "My Projects",
+    "Mon Parcours": "My Journey",
 
- 
-    
-    // CV Sections
-    education: "Formation",
-    experience: "Expérience Professionnelle",
-    certifications: "Certifications",
-    
-    // Education
-    inProgress: "En cours",
-    butTitle: "BUT Réseaux & Télécommunications",
-    butDesc: "Parcours <strong>Cybersécurité</strong> - Formation complète en administration réseau, sécurisation des systèmes, développement et supervision d'infrastructures.",
-    tags1: "Cybersécurité",
-    tags2: "Réseaux",
-    tags3: "Systèmes",
-    tags4: "Cisco",
-    technicianTitle: "Diplôme du Technicien - Informatique",
-    technicianDesc: "Mention <strong>Bien</strong> - Formation technique en informatique avec acquisition de compétences pratiques en maintenance et dépannage",
-    tags01: "Technicien",
-    tags02: "Maintenance",
-   
-    bepcTitle: "BEPC",
-    bepcDesc: "Diplôme national du brevet obtenu avec succès",
-    
-    // Experience
-    internTitle: "Stagiaire Technicien Informatique",
-    stage2023Desc: "Stage de 3 mois axé sur la maintenance informatique et l'assistance technique aux utilisateurs",
-    stage2022Desc: "Premier stage professionnel en assistance technique et maintenance informatique",
-    
-    // Experience tasks
-    task1: "Assistance technique aux utilisateurs",
-    task2: "Mise à jour des logiciels et pilotes",
-    task3: "Installation et configuration des systèmes d'exploitation",
-    task4: "Sauvegarde et récupération des données",
-    task5: "Diagnostic et résolution de problèmes matériels et logiciels",
-    task6: "Diagnostic et réparation de problèmes logiciels",
-    task7: "Maintenance matérielle (ouverture et depannage des ordinateurs)",
+    // CV - colonne gauche
+    "Informations de Contact": "Contact Information",
+    "Langues": "Languages",
+    "Français : Courant": "French: Fluent",
+    "Anglais : Intermédiaire": "English: Intermediate",
+    "Compétences Techniques": "Technical Skills",
+    "Réseaux : VLAN, OSPF, HSRP, STP, EtherChannel": "Networking: VLAN, OSPF, HSRP, STP, EtherChannel",
+    "Téléphonie IP (Asterisk)": "IP telephony (Asterisk)",
+    "Flask, MySQL & Docker": "Flask, MySQL & Docker",
+    "Installation et configuration des systèmes d'exploitation": "Operating system installation and configuration",
+    "Création de sites web WordPress": "WordPress website development",
+    "Programmation C & Python": "C & Python programming",
 
-    tags001: "Support technique",
-    tags002: "Windows",
-    tags003: "Dépannage",
-    tags004: "Sauvegarde",
-    
+    // CV - sections
+    "Formation": "Education",
+    "Expérience Professionnelle": "Professional Experience",
+    "En cours": "In progress",
+    "BUT Réseaux & Télécommunications": "BUT Networks & Telecommunications",
+    "IUT de Béthune - Université d'Artois, France": "IUT de Béthune - Artois University, France",
+    "Parcours <strong>Cybersécurité</strong> - Formation complète en administration réseau, sécurisation des systèmes, développement et supervision d'infrastructures.":
+      "<strong>Cybersecurity</strong> track - Comprehensive training in network administration, systems security, development and infrastructure monitoring.",
+    "Cybersécurité": "Cybersecurity",
+    "Réseaux": "Networks",
+    "Systèmes": "Systems",
+    "Diplôme du Technicien - Informatique": "IT Technician Diploma",
+    "Lycée Technique Coulibaly - Cotonou, Bénin": "Lycée Technique Coulibaly - Cotonou, Benin",
+    "Mention <strong>Bien</strong> - Formation technique en informatique avec acquisition de compétences pratiques en maintenance et dépannage":
+      "Grade: <strong>Good (Mention Bien)</strong> - Technical IT training with practical skills in maintenance and troubleshooting",
+    "Technicien": "Technician",
+    "Brevet d'Étude du Premier Cycle": "Junior secondary school certificate (BEPC)",
+    "Diplôme national du brevet obtenu avec succès": "National certificate successfully obtained",
 
-    task01: "Diagnostic et réparation de problèmes logiciels",
-    task02: "Maintenance matérielle (ouverture et depannage des ordinateurs)",
-    task03: "Assistance technique aux utilisateurs",
-    task04: "Installation et configuration des systèmes d'exploitation",
-    task05: "Mise à jour des logiciels et pilotes",
-    task06: "Sauvegarde et récupération des données",
-
-    tags0001: "Maintenance",
-    tags0002: "Hardware",
-    tags0003: "Support",
-    tags0004: "Dépannage",
-    
-    // Certifications
-    anssiTitle: "MOOC Cybersécurité - ANSSI",
-    anssiDesc: "Attestation de réussite au cours en ligne de l'ANSSI sur l'hygiène informatique et la cybersécurité",
-    ciscoTitle: "Introduction à la Sécurité Informatique",
-    ciscoDesc: "Attestation de réussite au cours Cisco sur les fondamentaux de la sécurité informatique",
-    pythonTitle: "Python Essentials 1",
-    pythonDesc: "Certification sur les bases de la programmation Python et les concepts fondamentaux",
-     tag1: "ANSSI",
-    tag2: "Officiel",
-    tag2: "Sécurité",
-    tag01: "Cisco",
-    tag02: "Sécurité",
-    tag03: "Réseaux",
-
-    // Portfolio
-    allProjects: "Tous",
-    administer: "Administrer",
-    connect: "Connecter",
-    program: "Programmer",
-    secure: "Sécuriser",
-    monitor: "Surveiller",
-    
-    // Projects
-    sae101Title: "SAE 1.01 - Hygiène Informatique",
-    sae101Desc: "Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique. Sensibilisation aux risques cyber et obtention de l'attestation ANSSI.",
-    sae103Title: "SAE 1.03 - Dispositif de Transmission",
-    sae103Desc: "Découverte et étude approfondie des dispositifs de transmission de données dans les réseaux..",
-    esgisTi: "Plateforme ESGIS",
-    esgisDesc: "Développement d'une plateforme web dans le cadre d'un projet scolaire. Création d'interfaces et mise en place d'une base de donnée.",
-    portfolioWebTitle: "Portfolio Web Responsive",
-    portfolioWebDesc: "Création de ce portfolio personnel avec design moderne, animations interactives et réseau de nodes en arrière-plan. Site responsive hébergé sur GitHub.",
-    
- 
-
-      
-  // Mentions Légales
-  legalNoticeTitle: "Mentions Légales",
-  siteEditor: "Éditeur du site",
-  editorText: "Nom : Ramziatou AFFO TOSSOU<br>Statut : Étudiante<br>Email : at.ramziatou@gmail.com<br>Établissement : IUT de Béthune - Université d'Artois<br>Adresse : 1230 Rue de l'Université, 62400 Béthune, France",
-  hosting: "Hébergement",
-  hostingText: "Ce site est hébergé par GitHub<br>GitHub, Inc.<br>88 Colin P Kelly Jr St<br>San Francisco, CA 94107<br>États-Unis<br>Site web : <a href='https://pages.github.com' target='_blank' style='color: var(--primary-color);'>https://pages.github.com</a>",
-  intellectualProperty: "Propriété intellectuelle",
-  intellectualText: "L'ensemble du contenu de ce site est la propriété de Ramziatou AFFO TOSSOU, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation expresse est interdite.",
-  personalData: "Données personnelles",
-  personalDataText: "Ce site ne collecte aucune donnée personnelle. Aucun cookie n'est utilisé pour le suivi des visiteurs. Les informations de contact affichées (email, réseaux sociaux) sont publiques et fournies uniquement à des fins de contact professionnel.",
-  description: "Description",
-  descriptionText: "Ce site a été conçu pour présenter mon parcours, mes compétences et les projets que j'ai réalisés dans le domaine de l'informatique et des réseaux. Il me permet de mettre en valeur mon évolution, mes réalisations et mon intérêt pour la cybersécurité.",
-  
-  // Crédits
-  creditsTitle: "Crédits",
-  template: "Template",
-  templateText: "Template de base : <a href='https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/' target='_blank' style='color: var(--primary-color);'>SnapFolio</a> par <a href='https://bootstrapmade.com/' target='_blank' style='color: var(--primary-color);'>BootstrapMade.com</a><br>Licence : <a href='https://bootstrapmade.com/license/' target='_blank' style='color: var(--primary-color);'>BootstrapMade License</a><br>Adaptation et personnalisation : Ramziatou AFFO TOSSOU",
-  frameworks: "Frameworks et bibliothèques",
-  frameworksText: "• <a href='https://getbootstrap.com/' target='_blank' style='color: var(--primary-color);'>Bootstrap 5.3.2</a> - Framework CSS<br>• <a href='https://icons.getbootstrap.com/' target='_blank' style='color: var(--primary-color);'>Bootstrap Icons</a> - Icônes<br>• <a href='https://michalsnik.github.io/aos/' target='_blank' style='color: var(--primary-color);'>AOS (Animate On Scroll)</a> - Animations<br>• <a href='https://fonts.google.com/' target='_blank' style='color: var(--primary-color);'>Google Fonts</a> - Typographies (Roboto, Ubuntu, Nunito)",
-  devTools: "Outils de développement",
-  devToolsText: "• Éditeur de code : Visual Studio Code<br>• Gestion de versions : Git & GitHub<br>• Hébergement : GitHub Pages<br>• Validation W3C : <a href='https://validator.w3.org/' target='_blank' style='color: var(--primary-color);'>W3C Markup Validation Service</a>",
-  acknowledgments: "Remerciements",
-  acknowledgementsText: "Je tiens à remercier ChatGPT pour son accompagnement et ses conseils tout au long de la réalisation de ce projet. Merci également à Claude IA et aux nombreuses vidéos YouTube qui m'ont permis de comprendre et d'appliquer certaines techniques. Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des outils qu'ils mettent à disposition, ainsi que toutes les ressources open source utilisées pour ce projet.",
-  designedBy: "Conçu par Ramziatou AFFO TOSSOU",
-  templateBy: "Template par",
-
-     // Footer
-    allRights: "Tous droits réservés",
-    legalNotice: "Mentions Légales",
-    credits: "Crédits",
-
-    
-
-
-},
-
-  
-  en: {
-    // Hero Section
-    greeting: "Hello,",
-    iAm: "I am",
-    role: "Futur Cybersecurity Expert",
-    desc: "Originally from Benin, I developed my interest in IT at Lycée Technique Coulibaly. After two internships in computer maintenance, I am currently in my first year of BUT Networks and Telecommunications, cybersecurity track, at IUT of Béthune.\n\nMy professional goal is to become an expert in information systems security and contribute to the protection of digital infrastructures in a constantly evolving environment.",
-    myProjects: "My Projects",
-    myCV: "My Resume",
-    
-    // Menu tooltips
-    home: "Home",
-    cv: "Resume",
-    portfolio: "Portfolio",
-    
-    // Section Titles
-    cvTitle: "Curriculum Vitae",
-    portfolioTitle: "Portfolio - R&T Projects",
-    
-    // CV Sidebar
-    contactInfo: "Contact Information",
-    languages: "Languages",
-    technicalSkills: "Technical Skills",
-    
-    // Languages
-    frenchNative: "French: Native",
-    englishInter: "English: Intermediate",
-    
-    // Technical Skills
-    networkAdmin: "Network Administration (Beginner)",
-    packetTracer: "Packet Tracer",
-    osConfig: "OS Installation & Configuration",
-    wordpress: "WordPress Website Development",
-    htmlCss: "HTML & CSS",
-    programming: "C & Python Programming",
-    
-    // CV Sections
-    education: "Education",
-    experience: "Professional Experience",
-    certifications: "Certifications",
-    
-    // Education
-    inProgress: "In Progress",
-    butTitle: "BUT Networks & Telecommunications",
-    butDesc: "<strong>Cybersecurity</strong> track - Comprehensive training in network administration, systems security, development and infrastructure supervision.",
-    
-    technicianTitle: "IT Technician Diploma",
-    technicianDesc: "Grade: <strong>Good</strong> - Technical IT training with practical skills in maintenance and troubleshooting",
-    tags1: "Cybersecurity",
-    tags2: "Networks",
-    tags3: "Systems",
-    tags4: "Cisco",
-    tags01: "Technician",
-    tags02: "Maintenance",
-    bepcTitle: "BEPC",
-    bepcDesc: "National diploma obtained successfully",
-    
-    // Experience
-    internTitle: "IT Technician Intern",
-    stage2023Desc: "3-month internship focused on IT maintenance and user technical support",
-    stage2022Desc: "First professional internship in technical support and computer maintenance",
-    
-    // Experience tasks
-    task1: "Technical user support",
-    task2: "Software and driver updates",
-    task3: "Operating system installation and configuration",
-    task4: "Data backup and recovery",
-    task5: "Hardware and software troubleshooting",
-    task6: "Software problem diagnosis and repair",
-    task7: "Hardware maintenance (computer opening and troubleshooting)",
-    tags001: "Technical Support",
-    tags002: "Windows",
-    tags003: "Troubleshooting",
-    tags004: "Backup",
-    task01: "Diagnosing and repairing software problems",
-    task02: "Hardware maintenance (opening and repairing computers)",
-    task03: "Technical support for users",
-    task04: "Installation and configuration of operating systems",
-    task05: "Updating software and drivers",
-    task06: "Data backup and recover",
-    tags0001: "Maintenance",
-    tags0002: "Hardware,",
-    tags0003: "Support",
-    tags0004: "Troubleshooting",
-    
+    // Expérience
+    "Juin - Août 2023": "June - August 2023",
+    "Juin - Août 2022": "June - August 2022",
+    "Stagiaire Technicien Informatique": "IT Technician Intern",
+    "Surface Informatique - Cotonou, Bénin": "Surface Informatique - Cotonou, Benin",
+    "DNL Informatique - Cotonou, Bénin": "DNL Informatique - Cotonou, Benin",
+    "Stage de 3 mois axé sur la maintenance informatique et l'assistance technique aux utilisateurs": "3-month internship focused on IT maintenance and user technical support",
+    "Premier stage professionnel en assistance technique et maintenance informatique": "First professional internship in technical support and IT maintenance",
+    "Assistance technique aux utilisateurs": "Technical support for users",
+    "Mise à jour des logiciels et pilotes": "Software and driver updates",
+    "Sauvegarde et récupération des données": "Data backup and recovery",
+    "Diagnostic et résolution de problèmes matériels et logiciels": "Hardware and software troubleshooting",
+    "Diagnostic et réparation de problèmes logiciels": "Software problem diagnosis and repair",
+    "Maintenance matérielle (ouverture et depannage des ordinateurs)": "Hardware maintenance (opening and repairing computers)",
+    "Support technique": "Technical support",
+    "Dépannage": "Troubleshooting",
+    "Sauvegarde": "Backup",
 
     // Certifications
-    anssiTitle: "Cybersecurity MOOC - ANSSI",
-    anssiDesc: "Certificate of completion for ANSSI's online course on IT hygiene and cybersecurity",
-    ciscoTitle: "Introduction to IT Security",
-    ciscoDesc: "Certificate of completion for Cisco course on IT security fundamentals",
-    pythonTitle: "Python Essentials 1",
-    pythonDesc: "Certification on Python programming basics and fundamental concepts",
-   
-    tag1: "ANSSI",
-    tag2: "Official",
-    tag2: "Security",
-    tag01: "Cisco,",
-    tag02: "Security",
-    tag03: "Networks",
+    "Février 2025": "February 2025",
+    "Certification validant les compétences en configuration et dépannage de réseaux commutés et routés, ainsi qu'en connectivité sans fil et sécurité de base des réseaux.":
+      "Certification validating skills in configuring and troubleshooting switched and routed networks, as well as wireless connectivity and basic network security.",
+    "Certification portant sur les concepts avancés de Python : modules, programmation orientée objet, gestion des exceptions et manipulation de fichiers.":
+      "Certification covering advanced Python concepts: modules, object-oriented programming, exception handling and file manipulation.",
+    "Programmation": "Programming",
+    "MOOC Cybersécurité - ANSSI": "Cybersecurity MOOC - ANSSI",
+    "Agence Nationale de la Sécurité des Systèmes d'Information": "French National Cybersecurity Agency (ANSSI)",
+    "Attestation de réussite au cours en ligne de l'ANSSI sur l'hygiène informatique et la cybersécurité": "Certificate of completion of ANSSI's online course on IT hygiene and cybersecurity",
+    "Officiel": "Official",
+    "Sécurité": "Security",
+    "Introduction à la Sécurité Informatique": "Introduction to IT Security",
+    "Attestation de réussite au cours Cisco sur les fondamentaux de la sécurité informatique": "Certificate of completion of the Cisco course on IT security fundamentals",
+    "Réseau": "Network",
+    "Certification sur les bases de la programmation Python et les concepts fondamentaux": "Certification on Python programming basics and core concepts",
+    "Voir le certificat": "View certificate",
 
-    // Portfolio
-    allProjects: "All",
-    administer: "Administer",
-    connect: "Connect",
-    program: "Program",
-    secure: "Secure",
-    monitor: "Monitor",
-    
-    // Projects
-    sae101Title: "SAE 1.01 - IT Hygiene",
-    sae101Desc: "Comprehensive training on cybersecurity and IT hygiene best practices. Cyber risk awareness and ANSSI certification obtained.",
-    sae103Title: "SAE 1.03 - Transmission Devices",
-    sae103Desc: "Discovery and in-depth study of data transmission devices in networks.",
-    esgisTitle: "ESGIS Platform",
-    esgisDesc: "Development of a web platform as part of a school project. Interface creation and database implementation.",
-    portfolioWebTitle: "Responsive Web Portfolio",
-    portfolioWebDesc: "Creation of this personal portfolio with modern design, interactive animations and network nodes background. Responsive site hosted on GitHub.",
-    
-    // Footer
-    allRights: "All Rights Reserved",
-    legalNotice: "Legal Notice",
-    credits: "Credits",
+    // Projets (cartes + modale)
+    "GreenBite — E-commerce & Supervision IoT": "GreenBite — E-commerce & IoT Monitoring",
+    "Site e-commerce de snacks sains : back-end Flask, base de données MySQL, déploiement Docker et supervision IoT.": "Healthy-snacks e-commerce website: Flask back-end, MySQL database, Docker deployment and IoT monitoring.",
+    "Conception d'un site e-commerce de snacks sains avec back-end Flask, base de données MySQL et déploiement conteneurisé via Docker. Supervision de la plateforme via des capteurs IoT.": "Design of a healthy-snacks e-commerce website with a Flask back-end, a MySQL database and containerized deployment with Docker. Platform monitoring through IoT sensors.",
+    "Réseau d'Entreprise Sécurisé": "Secure Enterprise Network",
+    "Conception et simulation sous Cisco Packet Tracer : VLAN, routage inter-VLAN, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, IPv4/IPv6 et sécurisation des accès.": "Design and simulation in Cisco Packet Tracer: VLAN, inter-VLAN routing, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, IPv4/IPv6 and access security.",
+    "Conception et simulation sous Cisco Packet Tracer d'un réseau d'entreprise sécurisé : VLAN, routage inter-VLAN, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, adressage IPv4/IPv6 et sécurisation des accès.": "Design and simulation in Cisco Packet Tracer of a secure enterprise network: VLAN, inter-VLAN routing, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, IPv4/IPv6 addressing and access security.",
+    "Infrastructure de Téléphonie IP": "IP Telephony Infrastructure",
+    "Déploiement d'une infrastructure de téléphonie IP avec Asterisk : configuration SIP, téléphones IP (Fanvil/Cisco), serveur TFTP, messagerie vocale et validation des communications.": "Deployment of an IP telephony infrastructure with Asterisk: SIP configuration, IP phones (Fanvil/Cisco), TFTP server, voicemail and call validation.",
+    "SAE 1.01 — Hygiène Informatique": "SAE 1.01 — IT Hygiene",
+    "Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique, avec obtention de l'attestation ANSSI SecNumacadémie.": "Comprehensive training on cybersecurity and IT hygiene best practices, with the ANSSI SecNumacadémie certificate.",
+    "Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique. Sensibilisation aux risques cyber et obtention de l'attestation ANSSI SecNumacadémie.": "Comprehensive training on cybersecurity and IT hygiene best practices. Cyber risk awareness and ANSSI SecNumacadémie certificate.",
+    "SAE 1.03 — Dispositif de Transmission": "SAE 1.03 — Transmission Systems",
+    "Étude des dispositifs de transmission de données dans les réseaux : analyse des supports cuivre, fibre et sans fil.": "Study of data transmission systems in networks: analysis of copper, fiber and wireless media.",
+    "Découverte et étude approfondie des dispositifs de transmission de données dans les réseaux. Analyse des supports cuivre, fibre et sans fil.": "In-depth study of data transmission systems in networks. Analysis of copper, fiber and wireless media.",
+    "Portfolio Web Responsive": "Responsive Web Portfolio",
+    "Ce portfolio personnel : design moderne, animations interactives et réseau de nodes en arrière-plan, hébergé sur GitHub Pages.": "This personal portfolio: modern design, interactive animations and a network-nodes background, hosted on GitHub Pages.",
+    "Création de ce portfolio personnel avec design moderne, animations interactives et réseau de nodes en arrière-plan. Site responsive hébergé sur GitHub Pages.": "Creation of this personal portfolio with a modern design, interactive animations and a network-nodes background. Responsive site hosted on GitHub Pages.",
+    "Voir la preuve sur GitHub": "View proof on GitHub",
+    "Voir sur GitHub": "View on GitHub",
+    "Programmer": "Program",
+    "Connecter": "Connect",
+    "Administrer": "Administer",
+    "Sécuriser": "Secure",
+    "Surveiller": "Monitor",
+    "Éléments de compétence mobilisés": "Skill elements involved",
+    "en choisissant les solutions et technologies réseaux adaptées": "by choosing suitable network solutions and technologies",
+    "en respectant les principes fondamentaux de la sécurité informatique": "by following core IT security principles",
+    "en utilisant une approche rigoureuse pour la résolution des dysfonctionnements": "by using a rigorous approach to troubleshooting",
+    "en respectant les règles métiers": "by following professional standards",
+    "en assurant une veille technologique": "by keeping up with technology watch",
 
-     // Legal Notice
-  legalNoticeTitle: "Legal Notice",
-  siteEditor: "Site Editor",
-  editorText: "Name: Ramziatou AFFO TOSSOU<br>Status: Student<br>Email: at.ramziatou@gmail.com<br>Institution: IUT de Béthune - Université d'Artois<br>Address: 1230 Rue de l'Université, 62400 Béthune, France",
-  hosting: "Hosting",
-  hostingText: "This site is hosted by GitHub<br>GitHub, Inc.<br>88 Colin P Kelly Jr St<br>San Francisco, CA 94107<br>United States<br>Website: <a href='https://pages.github.com' target='_blank' style='color: var(--primary-color);'>https://pages.github.com</a>",
-  intellectualProperty: "Intellectual Property",
-  intellectualText: "All content on this site is the property of Ramziatou AFFO TOSSOU, unless otherwise stated. Any reproduction, distribution or use without express authorization is prohibited.",
-  personalData: "Personal Data",
-  personalDataText: "This site does not collect any personal data. No cookies are used to track visitors. The contact information displayed (email, social networks) is public and provided solely for professional contact purposes.",
-  description: "Description",
-  descriptionText: "This site was designed to present my background, skills and projects I have completed in the field of IT and networks. It allows me to showcase my evolution, achievements and interest in cybersecurity.",
-  
-// Credits
-    creditsTitle: "Credits",
-    template: "Template",
-    templateText: "Base template: <a href='https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/' target='_blank' style='color: var(--primary-color);'>SnapFolio</a> by <a href='https://bootstrapmade.com/' target='_blank' style='color: var(--primary-color);'>BootstrapMade.com</a><br>License: <a href='https://bootstrapmade.com/license/' target='_blank' style='color: var(--primary-color);'>BootstrapMade License</a><br>Adaptation and customization: Ramziatou AFFO TOSSOU",
-    frameworks: "Frameworks and Libraries",
-    frameworksText: "• <a href='https://getbootstrap.com/' target='_blank' style='color: var(--primary-color);'>Bootstrap 5.3.2</a> - CSS Framework<br>• <a href='https://icons.getbootstrap.com/' target='_blank' style='color: var(--primary-color);'>Bootstrap Icons</a> - Icons<br>• <a href='https://michalsnik.github.io/aos/' target='_blank' style='color: var(--primary-color);'>AOS (Animate On Scroll)</a> - Animations<br>• <a href='https://fonts.google.com/' target='_blank' style='color: var(--primary-color);'>Google Fonts</a> - Typography (Roboto, Ubuntu, Nunito)",
-    devTools: "Development Tools",
-    devToolsText: "• Code editor: Visual Studio Code<br>• Version control: Git & GitHub<br>• Hosting: GitHub Pages<br>• W3C Validation: <a href='https://validator.w3.org/' target='_blank' style='color: var(--primary-color);'>W3C Markup Validation Service</a>",
-    acknowledgments: "Acknowledgments",
-    acknowledgementsText: "I would like to thank ChatGPT for its support and advice throughout this project. Thanks also to Claude AI and the many YouTube videos that helped me understand and apply certain techniques. Finally, I thank BootstrapMade for the SnapFolio template and the quality of the tools they provide, as well as all the open source resources used for this project.",
-    designedBy: "Designed by Ramziatou AFFO TOSSOU",
-    templateBy: "Template by",
-    
-    // Footer
-    allRights: "All Rights Reserved",
-    legalNotice: "Legal Notice",
-    credits: "Credits"
+    // Portfolio par compétences (overlays)
+    "Portfolio - Projets R&T": "Portfolio - R&T Projects",
+    "Retour": "Back",
+    "Retour aux AC": "Back to learning outcomes",
+    "Cliquez sur un apprentissage critique pour voir votre analyse réflexive": "Click a learning outcome to see my reflective analysis",
+    "Ce que j'ai fait": "What I did",
+    "Pourquoi je l'ai fait": "Why I did it",
+    "Comment je l'ai fait": "How I did it",
+    "Mes difficultés": "My difficulties",
+    "Ce que j'en ai appris": "What I learned",
+    "Ce que je ferais autrement": "What I would do differently",
+    "Exemple de trace — projet lié": "Evidence example — related project",
+    "Captures / Preuves visuelles": "Screenshots / Visual evidence",
+
+    // Footer / mentions légales
+    "Tous droits réservés": "All rights reserved",
+    "Mentions Légales": "Legal Notice",
+    "Crédits": "Credits",
+    "Éditeur du site": "Site publisher",
+    "Nom : Ramziatou AFFO TOSSOU": "Name: Ramziatou AFFO TOSSOU",
+    "Statut : Étudiante": "Status: Student",
+    "Établissement : IUT de Béthune - Université d'Artois": "Institution: IUT de Béthune - Artois University",
+    "Hébergement": "Hosting",
+    "Ce site est hébergé par GitHub": "This site is hosted by GitHub",
+    "États-Unis": "United States",
+    "Propriété intellectuelle": "Intellectual property",
+    "Données personnelles": "Personal data",
+    "L'ensemble du contenu de ce site est la propriété de Ramziatou AFFO TOSSOU, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation expresse est interdite.": "All content on this site is the property of Ramziatou AFFO TOSSOU unless otherwise stated. Any reproduction, distribution or use without express permission is prohibited.",
+    "Ce site ne collecte aucune donnée personnelle. Aucun cookie n'est utilisé pour le suivi des visiteurs. Les informations de contact affichées (email, réseaux sociaux) sont publiques et fournies uniquement à des fins de contact professionnel.": "This site does not collect any personal data. No cookies are used to track visitors. The contact information displayed (email, social networks) is public and provided for professional contact purposes only.",
+    "Ce site a été conçu pour présenter mon parcours, mes compétences et les projets que j’ai réalisés dans le domaine de l’informatique et des réseaux. Il me permet de mettre en valeur mon évolution, mes réalisations et mon intérêt pour la cybersécurité.": "This site was designed to present my background, skills and the projects I completed in IT and networking. It showcases my progress, achievements and interest in cybersecurity."
+  };
+
+  const TIPS = { "Accueil": "Home", "CV": "CV", "Mes Projets": "My Projects", "Portfolio": "Portfolio" };
+
+  const norm = s => s.replace(/\s+/g, ' ').trim();
+  const originals = new Map();   // noeud ou élément -> contenu FR d'origine
+  let lang = 'fr';
+
+  function toEN(root) {
+    // 1) blocs avec data-en="..." (pour tout nouveau contenu que tu ajoutes)
+    root.querySelectorAll('[data-en]').forEach(el => {
+      if (!originals.has(el)) originals.set(el, el.innerHTML);
+      el.innerHTML = el.dataset.en;
+      el.setAttribute('data-i18n-done', '');
+    });
+    // 2) paragraphes qui contiennent du HTML (<strong>)
+    root.querySelectorAll('.timeline-description').forEach(el => {
+      if (el.hasAttribute('data-i18n-done') || !el.children.length) return;
+      const en = EN[norm(el.innerHTML)];
+      if (en) { originals.set(el, el.innerHTML); el.innerHTML = en; el.setAttribute('data-i18n-done', ''); }
+    });
+    // 3) tous les textes simples
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      const p = n.parentElement;
+      if (!p || p.closest('script,style,canvas,[data-i18n-done]')) return;
+      const en = EN[norm(n.nodeValue)];
+      if (!en) return;
+      if (!originals.has(n)) originals.set(n, n.nodeValue);
+      n.nodeValue = n.nodeValue.match(/^\s*/)[0] + en + n.nodeValue.match(/\s*$/)[0];
+    });
   }
-};
 
-let currentLang = 'fr';
+  function toFR() {
+    originals.forEach((orig, node) => {
+      if (!node.isConnected) return;
+      if (node.nodeType === 1) { node.innerHTML = orig; node.removeAttribute('data-i18n-done'); }
+      else node.nodeValue = orig;
+    });
+    originals.clear();
+  }
 
-function switchLanguage() {
-  currentLang = currentLang === 'fr' ? 'en' : 'fr';
-  const t = translations[currentLang];
-  
-  document.getElementById('currentLang').textContent = currentLang.toUpperCase();
-  
-  // Hero Section
-  
-   document.querySelector('.hero h1 .greeting').textContent = t.greeting;
-  document.querySelector('.hero h1 .accent-text').textContent = t.iAm;
-  document.querySelector('.hero .lead').innerHTML = `${t.role}`;
+  function setTips(en) {
+    document.querySelectorAll('[data-tooltip]').forEach(el => {
+      if (!el.dataset.tipFr) el.dataset.tipFr = el.dataset.tooltip;
+      el.dataset.tooltip = en ? (TIPS[el.dataset.tipFr] || el.dataset.tipFr) : el.dataset.tipFr;
+    });
+  }
 
-  document.querySelector('.hero .description').textContent = t.desc;
+  function setLang(l) {
+    lang = l;
+    document.documentElement.lang = l;
+    document.getElementById('currentLang').textContent = l.toUpperCase();
+    if (l === 'en') toEN(document.body); else toFR();
+    setTips(l === 'en');
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
 
-  document.querySelectorAll('.btn-primary')[0].innerHTML = `<i class="bi bi-folder2-open"></i> &nbsp; ${t.myProjects}`;
-  document.querySelectorAll('.btn-outline')[0].innerHTML = `<i class="bi bi-file-earmark-text"></i> &nbsp; ${t.myCV}`;
-  
-  // Menu tooltips
-  document.querySelectorAll('.side-menu a')[0].setAttribute('data-tooltip', t.home);
-  document.querySelectorAll('.side-menu a')[1].setAttribute('data-tooltip', t.cv);
-  document.querySelectorAll('.side-menu a')[2].setAttribute('data-tooltip', t.portfolio);
-  
-  // Section Titles
-  document.querySelector('#resume .section-title h2').textContent = t.cvTitle;
-  document.querySelector('#portfolio .section-title h2').textContent = t.portfolioTitle;
-  
-  // Sidebar CV
-  document.querySelectorAll('.resume-side h3')[0].textContent = t.contactInfo;
-  document.querySelectorAll('.resume-side h3')[1].textContent = t.languages;
-  document.querySelectorAll('.resume-side h3')[2].textContent = t.technicalSkills;
-  
-  // Languages
-  document.querySelectorAll('.contact-info li')[4].innerHTML = `<i class="bi bi-check-circle"></i> ${t.frenchNative}`;
-  document.querySelectorAll('.contact-info li')[5].innerHTML = `<i class="bi bi-check-circle"></i> ${t.englishInter}`;
-  
-  // Technical Skills
-  const skills = document.querySelectorAll('.resume-side .contact-info')[2].querySelectorAll('li');
-  skills[0].innerHTML = `<i class="bi bi-shield-check"></i>${t.networkAdmin}`;
-  skills[1].innerHTML = `<i class="bi bi-tools"></i>${t.packetTracer}`;
-  skills[2].innerHTML = `<i class="bi bi-pc-display"></i>${t.osConfig}`;
-  skills[3].innerHTML = `<i class="bi bi-wordpress"></i>${t.wordpress}`;
-  skills[4].innerHTML = `<i class="bi bi-code-slash"></i>${t.htmlCss}`;
-  skills[5].innerHTML = `<i class="bi bi-code-slash"></i>${t.programming}`;
-  
-  // Timeline Sections
-  document.querySelectorAll('.resume-section h3')[0].innerHTML = `<i class="bi bi-mortarboard me-2"></i>${t.education}`;
-  document.querySelectorAll('.resume-section h3')[1].innerHTML = `<i class="bi bi-briefcase me-2"></i>${t.experience}`;
-  document.querySelectorAll('.resume-section h3')[2].innerHTML = `<i class="bi bi-award me-2"></i>${t.certifications}`;
-  
-
-  // Education
-  document.querySelectorAll('.timeline-date')[0].textContent = t.inProgress;
-  document.querySelectorAll('.timeline-title')[0].textContent = t.butTitle;
-  document.querySelectorAll('.timeline-description')[0].innerHTML = t.butDesc;
-  document.querySelectorAll('.timeline-tags span')[0].textContent = t.tags1;
-  document.querySelectorAll('.timeline-tags span')[1].textContent = t.tags2;
-  document.querySelectorAll('.timeline-tags span')[2].textContent = t.tags3;
-  document.querySelectorAll('.timeline-tags span')[3].textContent = t.tags4;
-  
-
-
-  document.querySelectorAll('.timeline-title')[1].textContent = t.technicianTitle;
-  document.querySelectorAll('.timeline-description')[1].innerHTML = t.technicianDesc;
-  document.querySelectorAll('.timeline-tags span')[4].textContent = t.tags01;
-  document.querySelectorAll('.timeline-tags span')[5].textContent = t.tags02;
-
-  
-  document.querySelectorAll('.timeline-title')[2].textContent = t.bepcTitle;
-  document.querySelectorAll('.timeline-description')[2].textContent = t.bepcDesc;
-  
-  // Experience
-  document.querySelectorAll('.timeline-title')[3].textContent = t.internTitle;
-  document.querySelectorAll('.timeline-description')[3].textContent = t.stage2023Desc;
-  document.querySelectorAll('.timeline-list li')[0].textContent = t.task1;
-  document.querySelectorAll('.timeline-list li')[1].textContent = t.task2;
-  document.querySelectorAll('.timeline-list li')[2].textContent = t.task3;
-  document.querySelectorAll('.timeline-list li')[3].textContent = t.task4;
-  document.querySelectorAll('.timeline-list li')[4].textContent = t.task5;
-  document.querySelectorAll('.timeline-tags span')[6].textContent = t.tags001;
-  document.querySelectorAll('.timeline-tags span')[7].textContent = t.tags002;
-  document.querySelectorAll('.timeline-tags span')[8].textContent = t.tags003;
-  document.querySelectorAll('.timeline-tags span')[9].textContent = t.tags004;
-  
-  
-  document.querySelectorAll('.timeline-title')[4].textContent = t.internTitle;
-  document.querySelectorAll('.timeline-description')[4].textContent = t.stage2022Desc;
-  document.querySelectorAll('.timeline-list li')[5].textContent = t.task01;
-  document.querySelectorAll('.timeline-list li')[6].textContent = t.task02;
-  document.querySelectorAll('.timeline-list li')[7].textContent = t.task03;
-  document.querySelectorAll('.timeline-list li')[8].textContent = t.task04;
-  document.querySelectorAll('.timeline-list li')[9].textContent = t.task05;
-  document.querySelectorAll('.timeline-list li')[10].textContent = t.task06;
-  document.querySelectorAll('.timeline-tags span')[10].textContent = t.tags0001;
-  document.querySelectorAll('.timeline-tags span')[11].textContent = t.tags0002;
-  document.querySelectorAll('.timeline-tags span')[12].textContent = t.tags0003;
-  document.querySelectorAll('.timeline-tags span')[13].textContent = t.tags0004;
-  
-  // Certifications
-  document.querySelectorAll('.timeline-title')[5].textContent = t.anssiTitle;
-  document.querySelectorAll('.timeline-description')[5].textContent = t.anssiDesc;
-  
-  document.querySelectorAll('.timeline-title')[6].textContent = t.ciscoTitle;
-  document.querySelectorAll('.timeline-description')[6].textContent = t.ciscoDesc;
-  document.querySelectorAll('.timeline-tags span')[14].textContent = t.tag1;
-  document.querySelectorAll('.timeline-tags span')[15].textContent = t.tag2;
-  document.querySelectorAll('.timeline-tags span')[16].textContent = t.tag3;
-  document.querySelectorAll('.timeline-tags span')[17].textContent = t.tag01;
-  document.querySelectorAll('.timeline-tags span')[18].textContent = t.tag02;
-  document.querySelectorAll('.timeline-tags span')[19].textContent = t.tag03;
-
-  document.querySelectorAll('.timeline-title')[7].textContent = t.pythonTitle;
-  document.querySelectorAll('.timeline-description')[7].textContent = t.pythonDesc;
-  
-  // Portfolio Filters
-  document.querySelectorAll('.portfolio-filters li')[0].innerHTML = `<i class="bi bi-grid-3x3-gap"></i> ${t.allProjects}`;
-  document.querySelectorAll('.portfolio-filters li')[1].innerHTML = `<i class="bi bi-gear"></i> ${t.administer}`;
-  document.querySelectorAll('.portfolio-filters li')[2].innerHTML = `<i class="bi bi-hdd-network"></i> ${t.connect}`;
-  document.querySelectorAll('.portfolio-filters li')[3].innerHTML = `<i class="bi bi-code-slash"></i> ${t.program}`;
-  document.querySelectorAll('.portfolio-filters li')[4].innerHTML = `<i class="bi bi-shield-check"></i> ${t.secure}`;
-  document.querySelectorAll('.portfolio-filters li')[5].innerHTML = `<i class="bi bi-eye"></i> ${t.monitor}`;
-  
-  // Projects
-  document.querySelectorAll('.portfolio-card-title')[0].textContent = t.sae101Title;
-  document.querySelectorAll('.portfolio-card-description')[0].textContent = t.sae101Desc;
-  
-  document.querySelectorAll('.portfolio-card-title')[1].textContent = t.sae103Title;
-  document.querySelectorAll('.portfolio-card-description')[1].textContent = t.sae103Desc;
-  
-  document.querySelectorAll('.portfolio-card-title')[2].textContent = t.esgisTitle;
-  document.querySelectorAll('.portfolio-card-description')[2].textContent = t.esgisDesc;
-  
-  document.querySelectorAll('.portfolio-card-title')[3].textContent = t.portfolioWebTitle;
-  document.querySelectorAll('.portfolio-card-description')[3].textContent = t.portfolioWebDesc;
-  
-
-  
-  // Competence Badges
-  const badges = document.querySelectorAll('.portfolio-competence-badge');
-  badges.forEach(badge => {
-    if (badge.classList.contains('badge-securiser')) {
-      badge.innerHTML = `<i class="bi bi-shield-check"></i> ${t.secure}`;
-    } else if (badge.classList.contains('badge-connecter')) {
-      badge.innerHTML = `<i class="bi bi-hdd-network"></i> ${t.connect}`;
-    } else if (badge.classList.contains('badge-programmer')) {
-      badge.innerHTML = `<i class="bi bi-code-slash"></i> ${t.program}`;
-    }
+  // Contenu généré en JS (modale projet, overlays AC) : retraduit à chaque ouverture
+  const dyn = ['project-modal', 'sp-ac-overlay', 'sp-reflexive-overlay']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  const mo = new MutationObserver(() => {
+    if (lang !== 'en') return;
+    mo.disconnect();
+    dyn.forEach(toEN);
+    watch();
   });
+  function watch() { dyn.forEach(el => mo.observe(el, { childList: true, subtree: true })); }
+  watch();
 
-  // Mentions Légales
-  const mentionsLegales = document.getElementById('mentions-legales');
-  if (mentionsLegales) {
-    const mentionsH3 = mentionsLegales.querySelectorAll('h3')[0];
-    const mentionsH4 = mentionsLegales.querySelectorAll('h4');
-    const mentionsP = mentionsLegales.querySelectorAll('p');
-    
-    if (mentionsH3) mentionsH3.textContent = t.legalNoticeTitle;
-    if (mentionsH4[0]) mentionsH4[0].textContent = t.siteEditor;
-    if (mentionsP[0]) mentionsP[0].innerHTML = t.editorText;
-    if (mentionsH4[1]) mentionsH4[1].textContent = t.hosting;
-    if (mentionsP[1]) mentionsP[1].innerHTML = t.hostingText;
-    if (mentionsH4[2]) mentionsH4[2].textContent = t.intellectualProperty;
-    if (mentionsP[2]) mentionsP[2].textContent = t.intellectualText;
-    if (mentionsH4[3]) mentionsH4[3].textContent = t.personalData;
-    if (mentionsP[3]) mentionsP[3].textContent = t.personalDataText;
-    if (mentionsH4[4]) mentionsH4[4].textContent = t.description;
-    if (mentionsP[4]) mentionsP[4].textContent = t.descriptionText;
-  }
-  
-  // Crédits
-  const credits = document.getElementById('credits');
-  if (credits) {
-    const creditsH3 = credits.querySelectorAll('h3')[0];
-    const creditsH4 = credits.querySelectorAll('h4');
-    const creditsP = credits.querySelectorAll('p');
-    
-    if (creditsH3) creditsH3.textContent = t.creditsTitle;
-    if (creditsH4[0]) creditsH4[0].textContent = t.template;
-    if (creditsP[0]) creditsP[0].innerHTML = t.templateText;
-    if (creditsH4[1]) creditsH4[1].textContent = t.frameworks;
-    if (creditsP[1]) creditsP[1].innerHTML = t.frameworksText;
-    if (creditsH4[2]) creditsH4[2].textContent = t.devTools;
-    if (creditsP[2]) creditsP[2].innerHTML = t.devToolsText;
-    if (creditsH4[3]) creditsH4[3].textContent = t.acknowledgments;
-    if (creditsP[3]) creditsP[3].textContent = t.acknowledgementsText;
-  }
-  
-//Footer
-const footerAllRights = document.querySelector('footer p');
-if (footerAllRights) {
-  footerAllRights.innerHTML = `&copy; <strong><span>Ramziatou AFFO TOSSOU</span></strong>. ${t.allRights}`;
-}
-
-const footerLinks = document.querySelectorAll('footer .credits a');
-if (footerLinks[0]) footerLinks[0].textContent = t.legalNotice;
-if (footerLinks[1]) footerLinks[1].textContent = t.credits;
-
-}
-  
-
-// Event listener
-document.getElementById('langBtn').addEventListener('click', switchLanguage);
-
-
-
-
+  document.getElementById('langBtn').addEventListener('click', () => setLang(lang === 'fr' ? 'en' : 'fr'));
+  try { if (localStorage.getItem('lang') === 'en') setLang('en'); } catch (e) {}
+})();
 // Données des projets
 const projectsData = {
   "sae101": {
