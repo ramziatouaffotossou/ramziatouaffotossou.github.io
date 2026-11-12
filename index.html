@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -54,10 +54,10 @@
                 </a>
                 <a  href="#mes-projets" data-tooltip="Mes Projets">
                     <i class="bi bi-folder2-open navicon"></i>
-                </a>
-                <a  href="#portfolio" data-tooltip="Portfolio">
-                    <i class="bi bi-briefcase"></i>
-                </a>
+                </a>      
+                <a href="#support-portfolio" data-tooltip="Portfolio">
+                   <i class="bi bi-briefcase"></i>
+                </a><!-- 4e icône du side-menu -->
             </div>
 <button id="menuToggle" class="menu-toggle"> ☰ </button> 
 
@@ -76,49 +76,49 @@
     <section id="hero" class="hero section">
       <!-- Canvas pour l'animation réseau -->
       <canvas id="network-canvas"></canvas>
-      
-      <div class="hero-content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-              <div class="hero-text">
-                <h1 ><span class="greeting">Bonjour,</span> <span class="accent-text">Je suis</span></h1>
-                <h2>Ramziatou AFFO TOSSOU</h2>
-                <p  class="lead">Future <span class="accent-text">Architecte Réseau & Sécurité</span></p>
-                <p  class="description">Originaire du Bénin, j'ai développé mon intérêt pour l'informatique au Lycée Technique Coulibaly. Après deux stages en maintenance informatique, je poursuis actuellement ma formation en deuxième année de BUT Réseaux & Télécommunications à l'IUT de Béthune.</p>
-
-                <div  class="hero-actions">
-                  <a  href="#portfolio" class="btn-primary">
-                    <i class="bi bi-folder2-open"></i> &nbsp;
-                    Mes Projets
-                  </a>
-                  <a data-i18n="btn_cv" href="#resume" class="btn-outline">
-                    <i class="bi bi-file-earmark-text"></i> &nbsp;
-                    Mon CV
-                  </a>
-                    <a data-i18n="btn_cv" href="monparcours.pdf" class="btn-outline">
-                    <i class="bi bi-file-earmark-text"></i> &nbsp;
-                    Mon Parcours
-                  </a>
-                </div>
-
-                <div class="hero-actions">
-                
-                  <a href="mailto:at.ramziatou@gmail.com" class="btn-outline">
-                    <i class="bi bi-envelope"></i> &nbsp;
-                    at.ramziatou@gmail.com
-                  </a>
-                </div>
-
-                <div class="social-links">
-                  <a href="https://github.com/ramziatouaffotossou" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
+      <div class="hero-text">
+          <div class="hero-badge" data-en='<span class="hero-badge-dot"></span> Looking for an internship in networks &amp; cybersecurity · 8 weeks · from April · Hauts-de-France'>
+            <span class="hero-badge-dot"></span>
+            Recherche un stage en réseaux &amp; cybersécurité · 8 semaines · à partir d'Avril · Hauts-de-France
           </div>
+        
+          <h1><span class="greeting">Bonjour,</span> <span class="accent-text">Je suis</span></h1>
+          <h2>Ramziatou AFFO TOSSOU</h2>
+          <p class="lead" data-en='BUT Networks &amp; Telecom student · <span class="accent-text">Networking, VoIP &amp; Cybersecurity</span>'>
+            Étudiante en BUT R&amp;T · <span class="accent-text">Réseaux, VoIP &amp; Cybersécurité</span>
+          </p>
+          <p class="description">Actuellement en deuxième année de BUT Réseaux & Télécommunications à l'IUT de Béthune, je développe mes compétences dans les domaines des réseaux informatiques, des systèmes, des télécommunications et de la sécurité.
+        
+        À travers mes projets universitaires et mes expériences pratiques, je cherche à approfondir mes connaissances et à développer mes compétences techniques sur le terrain.
+        
+        Je suis actuellement à la recherche d'un stage de 8 semaines afin de mettre en pratique mes acquis, découvrir de nouveaux environnements professionnels et contribuer à des projets informatiques concrets.
+        
+        Je suis également intéressée par une opportunité d'alternance pour la suite de mon parcours.
+        
+          </p>
+        
+          <div class="hero-actions">
+            <a href="assets/docs/CV_Ramziatou_AFFO_TOSSOU.pdf" target="_blank" rel="noopener" class="btn-primary">
+              <i class="bi bi-file-earmark-person"></i> &nbsp; Mon CV (PDF)
+            </a>
+            <a href="#mes-projets" class="btn-outline">
+              <i class="bi bi-folder2-open"></i> &nbsp; Mes Projets
+            </a>
+            <a href="monparcours.pdf" target="_blank" rel="noopener" class="btn-outline">
+              <i class="bi bi-file-earmark-text"></i> &nbsp; Mon Parcours
+            </a>
+          </div>
+          <div class="hero-actions">
+        	<a href="mailto:at.ramziatou@gmail.com" class="btn-outline">
+        	<i class="bi bi-envelope"></i> &nbsp; at.ramziatou@gmail.com </a>
+          </div>
+        
+          <div class="social-links">
+                <a href="https://github.com/ramziatouaffotossou" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+                      
         </div>
-      </div>
     </section>
     
     
@@ -135,10 +135,15 @@
             <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
               <h3 data-i18n=" ">Informations de Contact</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> Béthune, France</li>
-                <li><i class="bi bi-envelope"></i> at.ramziatou@gmail.com</li>
-                <li><i class="bi bi-linkedin"></i> <a  href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" style="color: var(--text-muted);">LinkedIn</a></li>
-                <li><i class="bi bi-github"></i> <a href="https://github.com/ramziatouaffotossou" target="_blank" style="color: var(--text-muted);">GitHub</a></li>
+                <li><i class="bi bi-geo-alt"></i> Hauts-de-France · Mobilité : Bethune, Lille, Arras</li>
+                  <li><i class="bi bi-diagram-3"></i>Réseaux : VLAN, OSPF, HSRP, STP, EtherChannel</li>
+                  <li><i class="bi bi-tools"></i>Packet Tracer</li>
+                  <li><i class="bi bi-telephone"></i>Téléphonie IP (Asterisk)</li>
+                  <li><i class="bi bi-database"></i>Flask, MySQL &amp; Docker</li>
+                  <li><i class="bi bi-pc-display"></i>Installation et configuration des systèmes d'exploitation</li>
+                  <li><i class="bi bi-wordpress"></i>Création de sites web WordPress</li>
+                  <li><i class="bi bi-code-slash"></i>HTML &amp; CSS</li>
+                  <li><i class="bi bi-code-slash"></i>Programmation C &amp; Python</li>
               </ul>
 
               <h3 class="mt-4">Langues</h3>
@@ -330,6 +335,9 @@
                       <span class="timeline-tag">Réseaux</span>
                     </div>
                   </div>
+                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
@@ -352,6 +360,9 @@
                       <span class="timeline-tag">Programmation</span>
                     </div>
                   </div>
+                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -374,6 +385,9 @@
                       <span class="timeline-tag">Sécurité</span>
                     </div>
                   </div>
+                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
@@ -396,6 +410,9 @@
                       <span class="timeline-tag">Réseau</span>
                     </div>
                   </div>
+                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
@@ -418,6 +435,9 @@
                       <span class="timeline-tag">Cisco</span>
                     </div>
                   </div>
+                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                  </a>
                 </div>
 
               </div>
