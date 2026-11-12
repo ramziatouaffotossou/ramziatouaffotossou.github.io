@@ -5,13 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Portfolio Ramziatou</title>
-  <meta name="description" content="">
+  <meta name="description" content="Portfolio de Ramziatou AFFO TOSSOU, étudiante en BUT Réseaux &amp; Télécommunications (parcours cybersécurité), à la recherche d'un stage.">
   <meta name="keywords" content="">
 
-   <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -43,31 +41,30 @@
 
 <body class="index-page">
 
+  <!-- Menu latéral -->
+  <div class="side-menu">
+    <a href="#hero" class="active" data-tooltip="Accueil">
+      <i class="bi bi-house navicon"></i>
+    </a>
+    <a href="#resume" data-tooltip="CV">
+      <i class="bi bi-file-earmark-text navicon"></i>
+    </a>
+    <a href="#mes-projets" data-tooltip="Mes Projets">
+      <i class="bi bi-folder2-open navicon"></i>
+    </a>
+    <a href="#support-portfolio" data-tooltip="Portfolio">
+      <i class="bi bi-briefcase"></i>
+    </a>
+  </div>
+  <button id="menuToggle" class="menu-toggle"> ☰ </button>
 
-            <div>
-                  <div class="side-menu">
-                <a   href="#hero" class="active" data-tooltip="Accueil">
-                    <i class="bi bi-house navicon"></i>
-                </a>
-                <a  href="#resume" data-tooltip="CV">
-                   <i class="bi bi-file-earmark-text navicon"></i>
-                </a>
-                <a  href="#mes-projets" data-tooltip="Mes Projets">
-                    <i class="bi bi-folder2-open navicon"></i>
-                </a>      
-                <a href="#support-portfolio" data-tooltip="Portfolio">
-                   <i class="bi bi-briefcase"></i>
-                </a><!-- 4e icône du side-menu -->
-            </div>
-<button id="menuToggle" class="menu-toggle"> ☰ </button> 
-
-<!-- Bouton Switch Langue -->
-<div class="language-switch">
-  <button id="langBtn" class="lang-btn">
-    <i class="bi bi-translate"></i>
-    <span id="currentLang">FR</span>
-  </button>
-</div>
+  <!-- Bouton Switch Langue -->
+  <div class="language-switch">
+    <button id="langBtn" class="lang-btn">
+      <i class="bi bi-translate"></i>
+      <span id="currentLang">FR</span>
+    </button>
+  </div>
 
 
   <main class="main">
@@ -76,110 +73,119 @@
     <section id="hero" class="hero section">
       <!-- Canvas pour l'animation réseau -->
       <canvas id="network-canvas"></canvas>
-      <div class="hero-text">
-          <div class="hero-badge" data-en='<span class="hero-badge-dot"></span> Looking for an internship in networks &amp; cybersecurity · 8 weeks · from April · Hauts-de-France'>
-            <span class="hero-badge-dot"></span>
-            Recherche un stage en réseaux &amp; cybersécurité · 8 semaines · à partir d'Avril · Hauts-de-France
+
+      <div class="hero-content">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="hero-text">
+
+                <div class="hero-badge" data-en='<span class="hero-badge-dot"></span> Looking for an internship in networks &amp; cybersecurity · 8 weeks · from April · Hauts-de-France'>
+                  <span class="hero-badge-dot"></span>
+                  Recherche un stage en réseaux &amp; cybersécurité · 8 semaines · à partir d'avril · Hauts-de-France
+                </div>
+
+                <h1><span class="greeting">Bonjour,</span> <span class="accent-text">Je suis</span></h1>
+                <h2>Ramziatou AFFO TOSSOU</h2>
+                <p class="lead" data-en='BUT Networks &amp; Telecom student · <span class="accent-text">Networking, VoIP &amp; Cybersecurity</span>'>
+                  Étudiante en BUT R&amp;T · <span class="accent-text">Réseaux, VoIP &amp; Cybersécurité</span>
+                </p>
+
+                <p class="description" data-en="Currently in my second year of the BUT Networks &amp; Telecommunications degree at IUT de Béthune, I am building my skills in computer networks, systems, telecommunications and security. I am looking for an 8-week internship to apply what I have learned and contribute to real IT projects. I am also interested in a work-study (alternance) opportunity for the next step of my studies.">
+                  Actuellement en deuxième année de BUT Réseaux &amp; Télécommunications à l'IUT de Béthune, je développe mes compétences en réseaux informatiques, systèmes, télécommunications et sécurité. Je recherche un stage de 8 semaines pour mettre en pratique mes acquis et contribuer à des projets informatiques concrets. Je suis également intéressée par une alternance pour la suite de mon parcours.
+                </p>
+
+                <div class="hero-actions">
+                  <a href="assets/docs/CV_Ramziatou_AFFO_TOSSOU.pdf" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="bi bi-file-earmark-person"></i> &nbsp; Mon CV (PDF)
+                  </a>
+                  <a href="#mes-projets" class="btn-outline">
+                    <i class="bi bi-folder2-open"></i> &nbsp; Mes Projets
+                  </a>
+                  <a href="monparcours.pdf" target="_blank" rel="noopener" class="btn-outline">
+                    <i class="bi bi-file-earmark-text"></i> &nbsp; Mon Parcours
+                  </a>
+                </div>
+
+                <div class="hero-actions">
+                  <a href="mailto:at.ramziatou@gmail.com" class="btn-outline">
+                    <i class="bi bi-envelope"></i> &nbsp; at.ramziatou@gmail.com
+                  </a>
+                </div>
+
+                <div class="social-links">
+                  <a href="https://github.com/ramziatouaffotossou" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+              </div>
+
+            </div>
           </div>
-        
-          <h1><span class="greeting">Bonjour,</span> <span class="accent-text">Je suis</span></h1>
-          <h2>Ramziatou AFFO TOSSOU</h2>
-          <p class="lead" data-en='BUT Networks &amp; Telecom student · <span class="accent-text">Networking, VoIP &amp; Cybersecurity</span>'>
-            Étudiante en BUT R&amp;T · <span class="accent-text">Réseaux, VoIP &amp; Cybersécurité</span>
-          </p>
-          <p class="description">Actuellement en deuxième année de BUT Réseaux & Télécommunications à l'IUT de Béthune, je développe mes compétences dans les domaines des réseaux informatiques, des systèmes, des télécommunications et de la sécurité.
-        
-        À travers mes projets universitaires et mes expériences pratiques, je cherche à approfondir mes connaissances et à développer mes compétences techniques sur le terrain.
-        
-        Je suis actuellement à la recherche d'un stage de 8 semaines afin de mettre en pratique mes acquis, découvrir de nouveaux environnements professionnels et contribuer à des projets informatiques concrets.
-        
-        Je suis également intéressée par une opportunité d'alternance pour la suite de mon parcours.
-        
-          </p>
-        
-          <div class="hero-actions">
-            <a href="assets/docs/CV_Ramziatou_AFFO_TOSSOU.pdf" target="_blank" rel="noopener" class="btn-primary">
-              <i class="bi bi-file-earmark-person"></i> &nbsp; Mon CV (PDF)
-            </a>
-            <a href="#mes-projets" class="btn-outline">
-              <i class="bi bi-folder2-open"></i> &nbsp; Mes Projets
-            </a>
-            <a href="monparcours.pdf" target="_blank" rel="noopener" class="btn-outline">
-              <i class="bi bi-file-earmark-text"></i> &nbsp; Mon Parcours
-            </a>
-          </div>
-          <div class="hero-actions">
-        	<a href="mailto:at.ramziatou@gmail.com" class="btn-outline">
-        	<i class="bi bi-envelope"></i> &nbsp; at.ramziatou@gmail.com </a>
-          </div>
-        
-          <div class="social-links">
-                <a href="https://github.com/ramziatouaffotossou" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
-                      
         </div>
+      </div>
     </section>
-    
-    
-    
- <section id="resume" class="resume section">
+
+
+    <!-- CV -->
+    <section id="resume" class="resume section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Curriculum Vitae</h2>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-          <!-- Left column -->
+
+          <!-- Colonne gauche -->
           <div class="col-lg-4">
             <div class="resume-side" data-aos="fade-right" data-aos-delay="100">
-              <h3 data-i18n=" ">Informations de Contact</h3>
+
+              <h3>Informations de Contact</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> Hauts-de-France · Mobilité : Bethune, Lille, Arras</li>
-                  <li><i class="bi bi-diagram-3"></i>Réseaux : VLAN, OSPF, HSRP, STP, EtherChannel</li>
-                  <li><i class="bi bi-tools"></i>Packet Tracer</li>
-                  <li><i class="bi bi-telephone"></i>Téléphonie IP (Asterisk)</li>
-                  <li><i class="bi bi-database"></i>Flask, MySQL &amp; Docker</li>
-                  <li><i class="bi bi-pc-display"></i>Installation et configuration des systèmes d'exploitation</li>
-                  <li><i class="bi bi-wordpress"></i>Création de sites web WordPress</li>
-                  <li><i class="bi bi-code-slash"></i>HTML &amp; CSS</li>
-                  <li><i class="bi bi-code-slash"></i>Programmation C &amp; Python</li>
+                <li data-en='<i class="bi bi-geo-alt"></i> Hauts-de-France · Mobility: Béthune, Lille, Arras'><i class="bi bi-geo-alt"></i> Hauts-de-France · Mobilité : Béthune, Lille, Arras</li>
+                <li><i class="bi bi-envelope"></i> at.ramziatou@gmail.com</li>
+                <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/ramziatou-affo-tossou-7ba4a7397/" target="_blank" rel="noopener" style="color: var(--text-muted);">LinkedIn</a></li>
+                <li><i class="bi bi-github"></i> <a href="https://github.com/ramziatouaffotossou" target="_blank" rel="noopener" style="color: var(--text-muted);">GitHub</a></li>
               </ul>
 
               <h3 class="mt-4">Langues</h3>
               <ul class="contact-info list-unstyled">
-                <li data-i18n="frenchNative"><i class="bi bi-check-circle"></i> Français : Courant</li>
-                <li data-i18n="englishInter"><i class="bi bi-check-circle"></i> Anglais : Intermédiaire</li>
+                <li><i class="bi bi-check-circle"></i> Français : Courant</li>
+                <li><i class="bi bi-check-circle"></i> Anglais : Intermédiaire</li>
               </ul>
 
-              <h3 data-i18n=" " class="mt-4">Compétences Techniques</h3>
+              <h3 class="mt-4">Compétences Techniques</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-shield-check"></i>Administration réseau (Débutant)</li>
+                <li><i class="bi bi-diagram-3"></i>Réseaux : VLAN, OSPF, HSRP, STP, EtherChannel</li>
                 <li><i class="bi bi-tools"></i>Packet Tracer</li>
-                <li><i class="bi bi-pc-display"></i>Installation et configuration des SE</li>
-                 <li><i class="bi bi-wordpress"></i>Création de sites web WordPress</li>
-                <li><i class="bi bi-code-slash"></i>HTML & CSS</li>
-                <li><i class="bi bi-code-slash"></i>Programmmation Langage C & Python</li>
+                <li><i class="bi bi-telephone"></i>Téléphonie IP (Asterisk)</li>
+                <li><i class="bi bi-database"></i>Flask, MySQL &amp; Docker</li>
+                <li><i class="bi bi-pc-display"></i>Installation et configuration des systèmes d'exploitation</li>
+                <li><i class="bi bi-wordpress"></i>Création de sites web WordPress</li>
+                <li><i class="bi bi-code-slash"></i>HTML &amp; CSS</li>
+                <li><i class="bi bi-code-slash"></i>Programmation C &amp; Python</li>
               </ul>
+
             </div>
           </div>
 
-          <!-- Right column -->
+          <!-- Colonne droite -->
           <div class="col-lg-8 ps-4 ps-lg-5">
-            
-            <!-- Timeline Formation -->
+
+            <!-- Formation -->
             <div class="resume-section" data-aos="fade-up">
               <h3><i class="bi bi-mortarboard me-2"></i>Formation</h3>
-              
+
               <div class="timeline">
-                
+
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                   <div class="timeline-icon">
                     <i class="bi bi-mortarboard-fill"></i>
                   </div>
                   <div class="timeline-content">
                     <span class="timeline-date">En cours</span>
-                    <h4 class="timeline-title">BUT Réseaux & Télécommunications</h4>
+                    <h4 class="timeline-title">BUT Réseaux &amp; Télécommunications</h4>
                     <div class="timeline-subtitle">
                       <i class="bi bi-building"></i>
                       IUT de Béthune - Université d'Artois, France
@@ -237,13 +243,11 @@
               </div>
             </div>
 
-            <!-- Timeline Expérience -->
+            <!-- Expérience -->
             <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
               <h3><i class="bi bi-briefcase me-2"></i>Expérience Professionnelle</h3>
-              
+
               <div class="timeline">
-                
-                
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                   <div class="timeline-icon">
@@ -257,7 +261,7 @@
                       Surface Informatique - Cotonou, Bénin
                     </div>
                     <p class="timeline-description">
-                     Stage de 3 mois axé sur la maintenance informatique et l'assistance technique aux utilisateurs
+                      Stage de 3 mois axé sur la maintenance informatique et l'assistance technique aux utilisateurs
                     </p>
                     <ul class="timeline-list">
                       <li>Assistance technique aux utilisateurs</li>
@@ -274,6 +278,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                   <div class="timeline-icon">
                     <i class="bi bi-laptop"></i>
@@ -287,7 +292,6 @@
                     </div>
                     <p class="timeline-description">
                       Premier stage professionnel en assistance technique et maintenance informatique
-                      
                     </p>
                     <ul class="timeline-list">
                       <li>Diagnostic et réparation de problèmes logiciels</li>
@@ -305,10 +309,10 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
-            
             <!-- Certifications -->
             <div class="resume-section" data-aos="fade-up" data-aos-delay="300">
               <h3><i class="bi bi-award me-2"></i>Certifications</h3>
@@ -321,7 +325,7 @@
                   </div>
                   <div class="timeline-content">
                     <span class="timeline-date">Février 2025</span>
-                    <h4 class="timeline-title">CCNA SRWE - Switching, Routing and Wireless Essentials</h4>
+                    <h4 class="timeline-title" data-en="CCNA SRWE (course) - Switching, Routing and Wireless Essentials">CCNA SRWE (cours) - Switching, Routing and Wireless Essentials</h4>
                     <div class="timeline-subtitle">
                       <i class="bi bi-building"></i>
                       Cisco Networking Academy
@@ -331,13 +335,13 @@
                     </p>
                     <div class="timeline-tags">
                       <span class="timeline-tag">Cisco</span>
-                      <span class="timeline-tag">CCNA</span>
+                      <span class="timeline-tag">Switching</span>
                       <span class="timeline-tag">Réseaux</span>
                     </div>
+                    <a class="cert-link" href="certifications/ccna-srwe.pdf" target="_blank" rel="noopener">
+                      <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                    </a>
                   </div>
-                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
-                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
@@ -359,10 +363,10 @@
                       <span class="timeline-tag">Cisco</span>
                       <span class="timeline-tag">Programmation</span>
                     </div>
+                    <a class="cert-link" href="certifications/python-essentials-2.pdf" target="_blank" rel="noopener">
+                      <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                    </a>
                   </div>
-                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
-                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
@@ -384,10 +388,10 @@
                       <span class="timeline-tag">Officiel</span>
                       <span class="timeline-tag">Sécurité</span>
                     </div>
+                    <a class="cert-link" href="certifications/anssi-secnumacademie.pdf" target="_blank" rel="noopener">
+                      <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                    </a>
                   </div>
-                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
-                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
@@ -409,10 +413,10 @@
                       <span class="timeline-tag">Sécurité</span>
                       <span class="timeline-tag">Réseau</span>
                     </div>
+                    <a class="cert-link" href="certifications/introduction-securite-informatique.pdf" target="_blank" rel="noopener">
+                      <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                    </a>
                   </div>
-                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
-                  </a>
                 </div>
 
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
@@ -434,10 +438,10 @@
                       <span class="timeline-tag">Programmation</span>
                       <span class="timeline-tag">Cisco</span>
                     </div>
+                    <a class="cert-link" href="certifications/python-essentials-1.pdf" target="_blank" rel="noopener">
+                      <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
+                    </a>
                   </div>
-                  <a class="cert-link" href="https://www.credly.com/badges/TON-LIEN" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right"></i> Voir le certificat
-                  </a>
                 </div>
 
               </div>
@@ -447,280 +451,274 @@
         </div>
       </div>
     </section>
-   <!-- Section Mes Projets (placée avant le Portfolio par compétences) -->
-<section id="mes-projets" class="mes-projets section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Mes Projets</h2>
-  </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="portfolio-container">
 
-      <!-- GreenBite -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="greenbite" onclick="openProjectModal('greenbite')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">GreenBite — E-commerce &amp; Supervision IoT</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
-          </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Site e-commerce de snacks sains : back-end Flask, base de données MySQL, déploiement Docker et supervision IoT.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">Flask</span>
-              <span class="portfolio-card-tag">MySQL</span>
-              <span class="portfolio-card-tag">Docker</span>
-              <span class="portfolio-card-tag">IoT</span>
-            </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-programmer"><i class="bi bi-code-slash"></i> Programmer</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/greenbite" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
-          </div>
-        </div>
+    <!-- Section Mes Projets -->
+    <section id="mes-projets" class="mes-projets section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Mes Projets</h2>
       </div>
 
-      <!-- Réseau d'entreprise sécurisé -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="reseau-entreprise" onclick="openProjectModal('reseau-entreprise')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">Réseau d'Entreprise Sécurisé</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
-          </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Conception et simulation sous Cisco Packet Tracer : VLAN, routage inter-VLAN, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, IPv4/IPv6 et sécurisation des accès.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">VLAN</span>
-              <span class="portfolio-card-tag">HSRP</span>
-              <span class="portfolio-card-tag">STP</span>
-              <span class="portfolio-card-tag">EtherChannel</span>
-              <span class="portfolio-card-tag">IPv4/IPv6</span>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-container">
+
+          <!-- GreenBite -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="greenbite" onclick="openProjectModal('greenbite')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">GreenBite — E-commerce &amp; Supervision IoT</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Site e-commerce de snacks sains : back-end Flask, base de données MySQL, déploiement Docker et supervision IoT.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">Flask</span>
+                  <span class="portfolio-card-tag">MySQL</span>
+                  <span class="portfolio-card-tag">Docker</span>
+                  <span class="portfolio-card-tag">IoT</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-programmer"><i class="bi bi-code-slash"></i> Programmer</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/greenbite" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
             </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-connecter"><i class="bi bi-hdd-network-fill"></i> Connecter</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/reseau-entreprise-securise" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
           </div>
+
+          <!-- Réseau d'entreprise sécurisé -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="reseau-entreprise" onclick="openProjectModal('reseau-entreprise')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">Réseau d'Entreprise Sécurisé</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Conception et simulation sous Cisco Packet Tracer : VLAN, routage inter-VLAN, Wi-Fi (WLC), HSRP, STP, EtherChannel, DHCP, IPv4/IPv6 et sécurisation des accès.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">VLAN</span>
+                  <span class="portfolio-card-tag">HSRP</span>
+                  <span class="portfolio-card-tag">STP</span>
+                  <span class="portfolio-card-tag">EtherChannel</span>
+                  <span class="portfolio-card-tag">IPv4/IPv6</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-connecter"><i class="bi bi-hdd-network-fill"></i> Connecter</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/reseau-entreprise-securise" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Téléphonie IP -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="telephonie-ip" onclick="openProjectModal('telephonie-ip')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">Infrastructure de Téléphonie IP</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Déploiement d'une infrastructure de téléphonie IP avec Asterisk : configuration SIP, téléphones IP (Fanvil/Cisco), serveur TFTP, messagerie vocale et validation des communications.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">Asterisk</span>
+                  <span class="portfolio-card-tag">SIP</span>
+                  <span class="portfolio-card-tag">VoIP</span>
+                  <span class="portfolio-card-tag">TFTP</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-administrer"><i class="bi bi-gear-fill"></i> Administrer</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/telephonie-ip-asterisk" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAE 1.01 -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="sae101" onclick="openProjectModal('sae101')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">SAE 1.01 — Hygiène Informatique</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique, avec obtention de l'attestation ANSSI SecNumacadémie.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">ANSSI</span>
+                  <span class="portfolio-card-tag">Cybersecurity</span>
+                  <span class="portfolio-card-tag">MOOC</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-securiser"><i class="bi bi-shield-fill-check"></i> Sécuriser</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAE 1.03 -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="sae103" onclick="openProjectModal('sae103')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">SAE 1.03 — Dispositif de Transmission</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Étude des dispositifs de transmission de données dans les réseaux : analyse des supports cuivre, fibre et sans fil.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">Transmission</span>
+                  <span class="portfolio-card-tag">Signal</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-connecter"><i class="bi bi-hdd-network-fill"></i> Connecter</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Web -->
+          <div class="portfolio-item">
+            <div class="portfolio-card" data-project="portfolio" onclick="openProjectModal('portfolio')" style="cursor:pointer;">
+              <div class="portfolio-card-header">
+                <h4 class="portfolio-card-title">Portfolio Web Responsive</h4>
+                <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+              </div>
+              <div class="portfolio-card-body">
+                <p class="portfolio-card-description">Ce portfolio personnel : design moderne, animations interactives et réseau de nodes en arrière-plan, hébergé sur GitHub Pages.</p>
+                <div class="portfolio-card-tags">
+                  <span class="portfolio-card-tag">HTML5</span>
+                  <span class="portfolio-card-tag">CSS3</span>
+                  <span class="portfolio-card-tag">JavaScript</span>
+                  <span class="portfolio-card-tag">Bootstrap</span>
+                </div>
+                <div class="portfolio-competences">
+                  <span class="portfolio-competence-badge badge-programmer"><i class="bi bi-code-slash"></i> Programmer</span>
+                </div>
+                <a href="https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git" target="_blank" rel="noopener" class="portfolio-card-proof" onclick="event.stopPropagation();">
+                  <i class="bi bi-github"></i> Voir la preuve sur GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <!-- Téléphonie IP -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="telephonie-ip" onclick="openProjectModal('telephonie-ip')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">Infrastructure de Téléphonie IP</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
-          </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Déploiement d'une infrastructure de téléphonie IP avec Asterisk : configuration SIP, téléphones IP (Fanvil/Cisco), serveur TFTP, messagerie vocale et validation des communications.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">Asterisk</span>
-              <span class="portfolio-card-tag">SIP</span>
-              <span class="portfolio-card-tag">VoIP</span>
-              <span class="portfolio-card-tag">TFTP</span>
-            </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-administrer"><i class="bi bi-gear-fill"></i> Administrer</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/telephonie-ip-asterisk" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
-          </div>
-        </div>
+
+    <!-- Portfolio par compétences (AC) -->
+    <section id="support-portfolio" class="support-portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio - Projets R&amp;T</h2>
       </div>
 
-      <!-- SAE 1.01 -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="sae101" onclick="openProjectModal('sae101')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">SAE 1.01 — Hygiène Informatique</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="sp-competences-grid">
+
+          <!-- ADMINISTRER -->
+          <div class="sp-comp-card sp-administrer" onclick="openCompetence('administrer')">
+            <div class="sp-comp-icon"><i class="bi bi-gear-fill"></i></div>
+            <div class="sp-comp-name">Administrer</div>
+            <div class="sp-comp-sub">6 AC</div>
+            <i class="bi bi-arrow-right sp-comp-arrow"></i>
           </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Formation complète sur les bonnes pratiques en cybersécurité et hygiène informatique, avec obtention de l'attestation ANSSI SecNumacadémie.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">ANSSI</span>
-              <span class="portfolio-card-tag">Cybersecurity</span>
-              <span class="portfolio-card-tag">MOOC</span>
-            </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-securiser"><i class="bi bi-shield-fill-check"></i> Sécuriser</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/sae101_hygiene_informatique.github.io.git" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
+
+          <!-- CONNECTER -->
+          <div class="sp-comp-card sp-connecter" onclick="openCompetence('connecter')">
+            <div class="sp-comp-icon"><i class="bi bi-hdd-network-fill"></i></div>
+            <div class="sp-comp-name">Connecter</div>
+            <div class="sp-comp-sub">5 AC</div>
+            <i class="bi bi-arrow-right sp-comp-arrow"></i>
           </div>
+
+          <!-- PROGRAMMER -->
+          <div class="sp-comp-card sp-programmer" onclick="openCompetence('programmer')">
+            <div class="sp-comp-icon"><i class="bi bi-code-slash"></i></div>
+            <div class="sp-comp-name">Programmer</div>
+            <div class="sp-comp-sub">5 AC</div>
+            <i class="bi bi-arrow-right sp-comp-arrow"></i>
+          </div>
+
+          <!-- SÉCURISER -->
+          <div class="sp-comp-card sp-securiser" onclick="openCompetence('securiser')">
+            <div class="sp-comp-icon"><i class="bi bi-shield-fill-check"></i></div>
+            <div class="sp-comp-name">Sécuriser</div>
+            <div class="sp-comp-sub">4 AC</div>
+            <i class="bi bi-arrow-right sp-comp-arrow"></i>
+          </div>
+
+          <!-- SURVEILLER -->
+          <div class="sp-comp-card sp-surveiller" onclick="openCompetence('surveiller')">
+            <div class="sp-comp-icon"><i class="bi bi-eye-fill"></i></div>
+            <div class="sp-comp-name">Surveiller</div>
+            <div class="sp-comp-sub">4 AC</div>
+            <i class="bi bi-arrow-right sp-comp-arrow"></i>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OVERLAY NIVEAU 2 : liste des AC -->
+    <div id="sp-ac-overlay" class="sp-overlay">
+      <div class="sp-overlay-panel">
+        <div class="sp-overlay-header">
+          <button class="sp-back-btn" onclick="closeAcOverlay()">
+            <i class="bi bi-arrow-left"></i> Retour
+          </button>
+          <div class="sp-overlay-title">
+            <span id="sp-ac-comp-icon"></span>
+            <h3 id="sp-ac-comp-name"></h3>
+          </div>
+          <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="sp-overlay-body">
+          <p class="sp-overlay-hint">Cliquez sur un apprentissage critique pour voir votre analyse réflexive</p>
+          <div id="sp-ac-list" class="sp-ac-list"></div>
         </div>
       </div>
-
-      <!-- SAE 1.03 -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="sae103" onclick="openProjectModal('sae103')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">SAE 1.03 — Dispositif de Transmission</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
-          </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Étude des dispositifs de transmission de données dans les réseaux : analyse des supports cuivre, fibre et sans fil.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">Transmission</span>
-              <span class="portfolio-card-tag">Signal</span>
-            </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-connecter"><i class="bi bi-hdd-network-fill"></i> Connecter</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/sae103_dispositif_de_transmission.github.io.git" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio Web -->
-      <div class="portfolio-item">
-        <div class="portfolio-card" data-project="portfolio" onclick="openProjectModal('portfolio')" style="cursor:pointer;">
-          <div class="portfolio-card-header">
-            <h4 class="portfolio-card-title">Portfolio Web Responsive</h4>
-            <div class="portfolio-card-meta"><i class="bi bi-calendar3"></i> 2025 - 2026</div>
-          </div>
-          <div class="portfolio-card-body">
-            <p class="portfolio-card-description">Ce portfolio personnel : design moderne, animations interactives et réseau de nodes en arrière-plan, hébergé sur GitHub Pages.</p>
-            <div class="portfolio-card-tags">
-              <span class="portfolio-card-tag">HTML5</span>
-              <span class="portfolio-card-tag">CSS3</span>
-              <span class="portfolio-card-tag">JavaScript</span>
-              <span class="portfolio-card-tag">Bootstrap</span>
-            </div>
-            <div class="portfolio-competences">
-              <span class="portfolio-competence-badge badge-programmer"><i class="bi bi-code-slash"></i> Programmer</span>
-            </div>
-            <a href="https://github.com/ramziatouaffotossou/ramziatouaffotossou.github.io.git" target="_blank" class="portfolio-card-proof" onclick="event.stopPropagation();">
-              <i class="bi bi-github"></i> Voir la preuve sur GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
 
-   <!-- Portfolio Section (compétences AC) -->
-   
-<section id="support-portfolio" class="support-portfolio section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio - Projets R&T</h2>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    
-
-    <!-- Grille des compétences -->
-    <div class="sp-competences-grid">
-
-      <!-- ADMINISTRER -->
-      <div class="sp-comp-card sp-administrer" onclick="openCompetence('administrer')">
-        <div class="sp-comp-icon"><i class="bi bi-gear-fill"></i></div>
-        <div class="sp-comp-name">Administrer</div>
-        <div class="sp-comp-sub">6 AC</div>
-        <i class="bi bi-arrow-right sp-comp-arrow"></i>
+    <!-- OVERLAY NIVEAU 3 : questions réflexives -->
+    <div id="sp-reflexive-overlay" class="sp-overlay">
+      <div class="sp-overlay-panel sp-overlay-panel--wide">
+        <div class="sp-overlay-header">
+          <button class="sp-back-btn" onclick="closeReflexiveOverlay()">
+            <i class="bi bi-arrow-left"></i> Retour aux AC
+          </button>
+          <div class="sp-overlay-title">
+            <span id="sp-ref-ac-code" class="sp-ref-ac-code"></span>
+            <h3 id="sp-ref-ac-label"></h3>
+          </div>
+          <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="sp-overlay-body">
+          <div id="sp-reflexive-grid" class="sp-reflexive-grid"></div>
+          <div id="sp-project-trace" class="sp-project-trace"></div>
+        </div>
       </div>
-
-      <!-- CONNECTER -->
-      <div class="sp-comp-card sp-connecter" onclick="openCompetence('connecter')">
-        <div class="sp-comp-icon"><i class="bi bi-hdd-network-fill"></i></div>
-        <div class="sp-comp-name">Connecter</div>
-        <div class="sp-comp-sub">5 AC</div>
-        <i class="bi bi-arrow-right sp-comp-arrow"></i>
-      </div>
-
-      <!-- PROGRAMMER -->
-      <div class="sp-comp-card sp-programmer" onclick="openCompetence('programmer')">
-        <div class="sp-comp-icon"><i class="bi bi-code-slash"></i></div>
-        <div class="sp-comp-name">Programmer</div>
-        <div class="sp-comp-sub">5 AC</div>
-        <i class="bi bi-arrow-right sp-comp-arrow"></i>
-      </div>
-
-      <!-- SÉCURISER -->
-      <div class="sp-comp-card sp-securiser" onclick="openCompetence('securiser')">
-        <div class="sp-comp-icon"><i class="bi bi-shield-fill-check"></i></div>
-        <div class="sp-comp-name">Sécuriser</div>
-        <div class="sp-comp-sub">4 AC</div>
-        <i class="bi bi-arrow-right sp-comp-arrow"></i>
-      </div>
-
-      <!-- SURVEILLER -->
-      <div class="sp-comp-card sp-surveiller" onclick="openCompetence('surveiller')">
-        <div class="sp-comp-icon"><i class="bi bi-eye-fill"></i></div>
-        <div class="sp-comp-name">Surveiller</div>
-        <div class="sp-comp-sub">4 AC</div>
-        <i class="bi bi-arrow-right sp-comp-arrow"></i>
-      </div>
-
-    </div><!-- fin grille -->
-
-  </div>
-</section>
-
-<!-- =============================================
-     OVERLAY NIVEAU 2 : liste des AC
-     ============================================= -->
-<div id="sp-ac-overlay" class="sp-overlay">
-  <div class="sp-overlay-panel">
-    <div class="sp-overlay-header">
-      <button class="sp-back-btn" onclick="closeAcOverlay()">
-        <i class="bi bi-arrow-left"></i> Retour
-      </button>
-      <div class="sp-overlay-title">
-        <span id="sp-ac-comp-icon"></span>
-        <h3 id="sp-ac-comp-name"></h3>
-      </div>
-      <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
     </div>
-    <div class="sp-overlay-body">
-      <p class="sp-overlay-hint">Cliquez sur un apprentissage critique pour voir votre analyse réflexive</p>
-      <div id="sp-ac-list" class="sp-ac-list"></div>
-    </div>
-  </div>
-</div>
-
-<!-- =============================================
-     OVERLAY NIVEAU 3 : questions réflexives
-     ============================================= -->
-<div id="sp-reflexive-overlay" class="sp-overlay">
-  <div class="sp-overlay-panel sp-overlay-panel--wide">
-    <div class="sp-overlay-header">
-      <button class="sp-back-btn" onclick="closeReflexiveOverlay()">
-        <i class="bi bi-arrow-left"></i> Retour aux AC
-      </button>
-      <div class="sp-overlay-title">
-        <span id="sp-ref-ac-code" class="sp-ref-ac-code"></span>
-        <h3 id="sp-ref-ac-label"></h3>
-      </div>
-      <button class="sp-close-btn" onclick="closeAllOverlays()"><i class="bi bi-x-lg"></i></button>
-    </div>
-    <div class="sp-overlay-body">
-      <div id="sp-reflexive-grid" class="sp-reflexive-grid"></div>
-      <div id="sp-project-trace" class="sp-project-trace"></div>
-    </div>
-  </div>
-</div>
-    
-   
-
 
   </main>
-<footer id="footer" class="footer position-relative">
+
+
+  <footer id="footer" class="footer position-relative">
     <div class="container">
       <div class="copyright text-center">
         <p>&copy; <span>2025-2026</span> <strong class="px-1 sitename">Ramziatou AFFO TOSSOU</strong> <span>Tous droits réservés</span></p>
       </div>
-      
+
       <div class="credits text-center mt-3">
         <p><a href="#mentions-legales" style="color: var(--primary-color); text-decoration: none;">Mentions Légales</a> | <a href="#credits" style="color: var(--primary-color); text-decoration: none;">Crédits</a></p>
       </div>
@@ -728,7 +726,7 @@
       <!-- Mentions Légales (cachées par défaut) -->
       <div id="mentions-legales" style="display: none; margin-top: 30px; padding: 30px; background: var(--dark-bg); border-radius: 12px; border: 1px solid rgba(0, 102, 204, 0.2);">
         <h3 style="color: var(--primary-color); margin-bottom: 20px;">Mentions Légales</h3>
-        
+
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Éditeur du site</h4>
         <p style="color: var(--text-muted);">
           Nom : Ramziatou AFFO TOSSOU<br>
@@ -745,7 +743,7 @@
           88 Colin P Kelly Jr St<br>
           San Francisco, CA 94107<br>
           États-Unis<br>
-          Site web : <a href="https://pages.github.com" target="_blank" style="color: var(--primary-color);">https://pages.github.com</a>
+          Site web : <a href="https://pages.github.com" target="_blank" rel="noopener" style="color: var(--primary-color);">https://pages.github.com</a>
         </p>
 
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Propriété intellectuelle</h4>
@@ -767,74 +765,74 @@
       <!-- Crédits -->
       <div id="credits" style="display: none; margin-top: 30px; padding: 30px; background: var(--dark-bg); border-radius: 12px; border: 1px solid rgba(0, 102, 204, 0.2);">
         <h3 style="color: var(--primary-color); margin-bottom: 20px;">Crédits</h3>
-        
+
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Template</h4>
         <p style="color: var(--text-muted);">
-          Template de base : <a href="https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/" target="_blank" style="color: var(--primary-color);">SnapFolio</a> par <a href="https://bootstrapmade.com/" target="_blank" style="color: var(--primary-color);">BootstrapMade.com</a><br>
-          Licence : <a href="https://bootstrapmade.com/license/" target="_blank" style="color: var(--primary-color);">BootstrapMade License</a><br>
+          Template de base : <a href="https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/" target="_blank" rel="noopener" style="color: var(--primary-color);">SnapFolio</a> par <a href="https://bootstrapmade.com/" target="_blank" rel="noopener" style="color: var(--primary-color);">BootstrapMade.com</a><br>
+          Licence : <a href="https://bootstrapmade.com/license/" target="_blank" rel="noopener" style="color: var(--primary-color);">BootstrapMade License</a><br>
           Adaptation et personnalisation : Ramziatou AFFO TOSSOU
         </p>
 
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Frameworks et bibliothèques</h4>
         <p style="color: var(--text-muted);">
-          • <a href="https://getbootstrap.com/" target="_blank" style="color: var(--primary-color);">Bootstrap 5.3.2</a> - Framework CSS<br>
-          • <a href="https://icons.getbootstrap.com/" target="_blank" style="color: var(--primary-color);">Bootstrap Icons</a> - Icônes<br>
-          • <a href="https://michalsnik.github.io/aos/" target="_blank" style="color: var(--primary-color);">AOS (Animate On Scroll)</a> - Animations<br>
-          • <a href="https://fonts.google.com/" target="_blank" style="color: var(--primary-color);">Google Fonts</a> - Typographies (Roboto, Ubuntu, Nunito)
+          • <a href="https://getbootstrap.com/" target="_blank" rel="noopener" style="color: var(--primary-color);">Bootstrap 5.3.2</a> - Framework CSS<br>
+          • <a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener" style="color: var(--primary-color);">Bootstrap Icons</a> - Icônes<br>
+          • <a href="https://michalsnik.github.io/aos/" target="_blank" rel="noopener" style="color: var(--primary-color);">AOS (Animate On Scroll)</a> - Animations<br>
+          • <a href="https://fonts.google.com/" target="_blank" rel="noopener" style="color: var(--primary-color);">Google Fonts</a> - Typographies (Roboto, Ubuntu, Nunito)
         </p>
 
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Outils de développement</h4>
         <p style="color: var(--text-muted);">
           • Éditeur de code : Visual Studio Code<br>
-          • Gestion de versions : Git & GitHub<br>
+          • Gestion de versions : Git &amp; GitHub<br>
           • Hébergement : GitHub Pages<br>
-          • Validation W3C : <a href="https://validator.w3.org/" target="_blank" style="color: var(--primary-color);">W3C Markup Validation Service</a>
+          • Validation W3C : <a href="https://validator.w3.org/" target="_blank" rel="noopener" style="color: var(--primary-color);">W3C Markup Validation Service</a>
         </p>
 
         <h4 style="color: var(--text-light); margin-top: 20px; margin-bottom: 10px;">Remerciements</h4>
         <p style="color: var(--text-muted);">
-         Je tiens à remercier ChatGPT pour son accompagnement et ses conseils tout au long de la réalisation de ce projet.
-Merci également à Claude IA  et aux nombreuses vidéos YouTube qui m’ont permis de comprendre et d’appliquer certaines techniques.
-Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des outils qu’ils mettent à disposition, ainsi que toutes les ressources open source utilisées pour ce projet.
+          Je tiens à remercier ChatGPT pour son accompagnement et ses conseils tout au long de la réalisation de ce projet.
+          Merci également à Claude IA et aux nombreuses vidéos YouTube qui m’ont permis de comprendre et d’appliquer certaines techniques.
+          Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des outils qu’ils mettent à disposition, ainsi que toutes les ressources open source utilisées pour ce projet.
         </p>
       </div>
 
       <div class="credits text-center mt-3">
         <p style="color: var(--text-muted); font-size: 0.9rem;">
-          Designed  by Ramziatou AFFO TOSSOU <span style="color: var(--primary-color);">❤</span>| 
-          Template by <a href="https://bootstrapmade.com/" target="_blank" style="color: var(--primary-color); text-decoration: none;">BootstrapMade</a>
+          Designed by Ramziatou AFFO TOSSOU <span style="color: var(--primary-color);">❤</span> |
+          Template by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">BootstrapMade</a>
         </p>
       </div>
     </div>
 
-  <!-- Modal Détail Projet -->
-<div id="project-modal" class="project-modal-overlay" onclick="closeProjectModal(event)">
-  <div class="project-modal-box">
-    <button class="project-modal-close" onclick="closeModal()">
-      <i class="bi bi-x-lg"></i>
-    </button>
+    <!-- Modal Détail Projet -->
+    <div id="project-modal" class="project-modal-overlay" onclick="closeProjectModal(event)">
+      <div class="project-modal-box">
+        <button class="project-modal-close" onclick="closeModal()">
+          <i class="bi bi-x-lg"></i>
+        </button>
 
-    <div class="project-modal-header">
-      <div class="project-modal-badge" id="modal-badge"></div>
-      <h3 id="modal-title"></h3>
-      <div class="project-modal-meta">
-        <span id="modal-date"><i class="bi bi-calendar3"></i> </span>
-        <a id="modal-github" href="#" target="_blank">
-          <i class="bi bi-github"></i> Voir sur GitHub
-        </a>
+        <div class="project-modal-header">
+          <div class="project-modal-badge" id="modal-badge"></div>
+          <h3 id="modal-title"></h3>
+          <div class="project-modal-meta">
+            <span id="modal-date"><i class="bi bi-calendar3"></i> </span>
+            <a id="modal-github" href="#" target="_blank" rel="noopener">
+              <i class="bi bi-github"></i> Voir sur GitHub
+            </a>
+          </div>
+        </div>
+
+        <p id="modal-description" class="project-modal-desc"></p>
+
+        <div class="project-modal-tags" id="modal-tags"></div>
+
+        <div class="project-modal-ce-section">
+          <h4><i class="bi bi-bullseye"></i> Éléments de compétence mobilisés</h4>
+          <ul class="project-modal-ce-list" id="modal-ce-list"></ul>
+        </div>
       </div>
     </div>
-
-    <p id="modal-description" class="project-modal-desc"></p>
-
-    <div class="project-modal-tags" id="modal-tags"></div>
-
-    <div class="project-modal-ce-section">
-      <h4><i class="bi bi-bullseye"></i> Éléments de compétence mobilisés</h4>
-      <ul class="project-modal-ce-list" id="modal-ce-list"></ul>
-    </div>
-  </div>
-</div>
   </footer>
 
   <!-- Scroll Top -->
@@ -843,8 +841,6 @@ Enfin, je remercie BootstrapMade pour le template SnapFolio et la qualité des o
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
